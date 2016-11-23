@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../styles/ionic.min.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/ionic-hacks-buttons.css" />
+	<link rel="stylesheet" type="text/css" href="../styles/font-sf.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <script src="../scripts/ionic.bundle.min.js"></script>
+</head>
+<body ng-app="starter">
+
+<ion-pane>
+    <ion-header-bar class="bar-positive">
+        <h1 class="title">Buttons</h1>
+    </ion-header-bar>
+    
+    <ion-content class="has-header padding-horizontal" >
+        <center>
+            <button class="button button-positive button-clear">btn</button>
+            <button class="button button-positive button-block button-no-radius btn-primary">btn btn-primary</button>
+            <button class="button button-positive button-block button-outline button-no-radius">btn btn-outline</button>
+            <button class="button button-positive button-block button-sm-radius btn-primary">btn btn-primary btn-rounded-sm</button>
+            <button class="button button-positive button-block button-sm-radius button-outline">btn btn-outline btn-rounded-sm</button>
+            <button class="button button-positive button-block button-lg-radius btn-primary">btn btn-primary btn-rounded-lg</button>
+            <button class="button button-positive button-block button-outline button-lg-radius">btn btn-outline btn-rounded-lg</button>
+            <button class="button button-block button-no-radius button-disabled" disabled>btn isEnabled="false"</button>
+            <button class="button button-block button-disabled button-sm-radius button-sm-text" disabled>btn isEnabled="false" btn-rounded-sm</button>
+            <button class="button button-block button-lg-radius button-disabled button-sm-text" disabled>btn isEnabled="false" btn-rounded-lg</button>
+        </center>
+    </ion-content>
+
+</ion-pane>
+
+<script>
+    angular.module('starter', ['ionic']);
+</script>
+
+</body>
+</html>

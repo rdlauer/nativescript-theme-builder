@@ -1,0 +1,11 @@
+body, h1, h2, h3, h4, h5, h6, button, .tab-item {
+    font-family: "San Francisco";
+}
+
+.form-input-rounded {
+    border-radius: 30px;
+}
+
+.form-input-disabled {
+    background-color: #f8f8f8;
+}

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NativeScript Theme Builder</title>
+    <meta name="description" content="Create and edit CSS themes for building cross-platform native mobile apps with JavaScript, TypeScript, and NativeScript.">
+    <meta name="keywords" content="nativescript, css, style, theme, ui, ux, elements, theme builder, theme editor, widgets, angularjs, mobile app, ios, android">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="styles/app.css" />
+    <link rel="stylesheet" type="text/css" href="styles/spectrum.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <link rel="stylesheet" href="styles/remodal.css">
+    <link rel="stylesheet" href="styles/remodal-default-theme.css">
+    <link rel="stylesheet" href="styles/jquery-labelauty.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="scripts/spectrum.js"></script>
+    <script src="scripts/remodal.min.js"></script>
+    <script src="scripts/jquery-labelauty.js"></script>
+    <script src="scripts/app-setup.js"></script>
+    <script src="scripts/app-download-css.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-87806955-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+<body>
+<div class="content">
+
+    <input type="hidden" id="core-theme" value="light" />
+
+    <div class="side-panel">
+        <header>
+            <img class="logo" src="images/nativescript-logo.png" alt="nativescript logo">
+            <div class="logo-title">NativeScript Theme Builder</div>
+        </header>
+
+        <section>
+            <div class="side-section-download">
+                <button class="btn btn-download" id="download-theme">Download Theme</button>
+            </div>
+
+            <div class="side-section">
+                <div id="side-global" class="side-section-header">
+                    Global
+                    <button class="btn-revert">
+                        <i class="icon icon-lg ion-ios-refresh-empty"></i>
+                    </button>
+                </div>
+                <ul id="side-global-items">
+                    <li>
+                        Font (for simulators)
+                        <select id="global-font" class="enable-select">
+                            <option value="San Francisco">San Francisco (iOS)</option>
+                            <option value="Roboto">Roboto (Android)</option>
+                        </select>
+                    </li>
+                    <li>
+                        Action Bar Color
+                        <input id="global-action-bar" class="enable-cp" />
+                    </li>
+                    <li>
+                        View Background
+                        <input id="global-bg" class="enable-cp" />
+                    </li>
+                </ul>
+            </div>
+
+            <div class="side-section">
+                <div id="side-widgets" class="side-section-header">
+                    UI Widgets
+                    <button class="btn-revert">
+                        <i class="icon icon-lg ion-ios-refresh-empty"></i>
+                    </button>
+                </div>
+                <ul id="side-widgets-items" style="display:none">
+                    <li>
+                        Segmented Bar Color
+                        <input id="ios-seg-bar" class="enable-cp" />
+                    </li>
+                    <li>
+                        Segmented Bar Text (iOS Inactive)
+                        <input id="ios-seg-bar-text-inactive" class="enable-cp" />
+                    </li>
+                    <li>
+                        Segmented Bar Text
+                        <input id="ios-seg-bar-text-active" class="enable-cp" />
+                    </li>
+                    <!--<li>
+                        Android Segmented Bar Color
+                        <input id="android-seg-bar" class="enable-cp" />
+                    </li>
+                    <li>
+                        Android Segmented Bar Text
+                        <input id="android-seg-bar-text" class="enable-cp" />
+                    </li>-->
+                    <li>
+                        Switch
+                        <input id="ios-switch" class="enable-cp" />
+                    </li>
+                    <!--<li>
+                        Android Switch
+                        <input id="android-switch" class="enable-cp" />
+                    </li>-->
+                    <li>
+                        Activity Indicator
+                        <input id="ios-activity" class="enable-cp" />
+                    </li>
+                    <!--<li>
+                        Android Activity Indicator
+                        <input id="android-activity" class="enable-cp" />
+                    </li>
+                    <li>
+                        Search Bar
+                        <input id="search-bar" class="enable-cp" />
+                    </li>-->
+                    <li>
+                        Slider
+                        <input id="slider" class="enable-cp" />
+                    </li>
+                    <li>
+                        Progress Indicator
+                        <input id="progress-indicator" class="enable-cp" />
+                    </li>
+                </ul>
+            </div>
+            <div class="side-section">
+                <div id="side-listviews-tabs" class="side-section-header">
+                    Tabs and ListViews
+                    <button class="btn-revert">
+                        <i class="icon icon-lg ion-ios-refresh-empty"></i>
+                    </button>
+                </div>
+                <ul id="side-listviews-tabs-items" style="display:none">
+                    <!--<li>
+                        Tab Label Text Size
+                        <input id="tab-label-text-px" type="text" size="4" maxlength="3" value="16" class="enable-txt" />
+                    </li>-->
+                    <li>
+                        Tab Label Text Color
+                        <input id="tab-label-text-color" class="enable-cp" />
+                    </li>
+                    <li>
+                        Tab Bar Color
+                        <input id="tab-bar-color" class="enable-cp" />
+                    </li>
+                    <li>
+                        Avatar Border Radius
+                        <input id="listitem-avatar-radius-pct" type="text" size="4" maxlength="3" value="30" class="enable-txt" />
+                    </li>
+                    <li>
+                        Item Heading Size
+                        <input id="listitem-heading-size-px" type="text" size="4" maxlength="3" value="16" class="enable-txt" />
+                    </li>
+                    <li>
+                        Item Sub-Heading Size
+                        <input id="listitem-subheading-size-px" type="text" size="4" maxlength="3" value="14" class="enable-txt" />
+                    </li>
+                    <li>
+                        Thumbnail Border Radius
+                        <input id="listitem-thumb-radius-pct" type="text" size="4" maxlength="3" value="0" class="enable-txt"  />
+                    </li>
+                </ul>
+            </div>
+            <div class="side-section">
+                <div id="side-text" class="side-section-header">
+                    Text
+                    <button class="btn-revert">
+                        <i class="icon icon-lg ion-ios-refresh-empty"></i>
+                    </button>
+                </div>
+                <ul id="side-text-items" style="display:none">
+                    <li>
+                        Body Text Size
+                        <input id="text-size-px" type="text" size="4" maxlength="3" value="14" class="enable-txt" />
+                    </li>
+                    <li>
+                        H1 Size
+                        <input id="text-h1-size-px" type="text" size="4" maxlength="3" value="36" class="enable-txt" />
+                    </li>
+                    <li>
+                        H2 Size
+                        <input id="text-h2-size-px" type="text" size="4" maxlength="3" value="30" class="enable-txt" />
+                    </li>
+                    <li>
+                        H3 Size
+                        <input id="text-h3-size-px" type="text" size="4" maxlength="3" value="24" class="enable-txt" />
+                    </li>
+                    <li>
+                        H4 Size
+                        <input id="text-h4-size-px" type="text" size="4" maxlength="3" value="18" class="enable-txt"  />
+                    </li>
+                    <li>
+                        H5 Size
+                        <input id="text-h5-size-px" type="text" size="4" maxlength="3" value="14" class="enable-txt" />
+                    </li>
+                    <li>
+                        H6 Size
+                        <input id="text-h6-size-px" type="text" size="4" maxlength="3" value="12" class="enable-txt"  />
+                    </li>
+                    <li>
+                        "Primary" Color
+                        <input id="text-primary-color" class="enable-cp" />
+                    </li>
+                    <li>
+                        "Danger" Color
+                        <input id="text-danger-color" class="enable-cp" />
+                    </li>
+                    <li>
+                        "Muted" Color
+                        <input id="text-muted-color" class="enable-cp" />
+                    </li>
+                </ul>
+            </div>
+            <div class="side-section">
+                <div id="side-buttons" class="side-section-header">
+                    Buttons
+                    <button class="btn-revert">
+                        <i class="icon icon-lg ion-ios-refresh-empty"></i>
+                    </button>
+                </div>
+                <ul id="side-buttons-items" style="display:none">
+                    <li>
+                        Plain Button Text Color
+                        <input id="buttons-plain-text-color" class="enable-cp" />
+                    </li>
+                    <li>
+                        Primary Button Background Color
+                        <input id="buttons-primary-bg-color" class="enable-cp" />
+                    </li>
+                    <li>
+                        Primary Button Text Color
+                        <input id="buttons-primary-text-color" class="enable-cp" />
+                    </li>
+                    <li>
+                        Outlined Button Border Color
+                        <input id="buttons-outline-bg-color" class="enable-cp" />
+                    </li>
+                    <li>
+                        Outlined Button Text Color
+                        <input id="buttons-outline-text-color" class="enable-cp" />
+                    </li>
+                    <li>
+                        Disabled Button Background Color
+                        <input id="buttons-disabled-bg-color" class="enable-cp" />
+                    </li>
+                    <li>
+                        Disabled Button Text Color
+                        <input id="buttons-disabled-text-color" class="enable-cp" />
+                    </li>
+                    <li>
+                        Small Rounded Button Radius
+                        <input id="buttons-rounded-sm-px" type="text" size="4" maxlength="3" value="4" class="enable-txt" />
+                    </li>
+                    <li>
+                        Large Rounded Button Radius
+                        <input id="buttons-rounded-lg-px" type="text" size="4" maxlength="3" value="30" class="enable-txt" />
+                    </li>
+                </ul>
+            </div>
+            <div class="side-section">
+                <div id="side-form-elements" class="side-section-header">
+                    Form Elements
+                    <button class="btn-revert">
+                        <i class="icon icon-lg ion-ios-refresh-empty"></i>
+                    </button>
+                </div>
+                <ul id="side-form-elements-items" style="display:none">
+                    <li>
+                        Label Text Size
+                        <input id="form-label-text-px" type="text" size="4" maxlength="3" value="16" class="enable-txt" />
+                    </li>
+                    <li>
+                        Placeholder/Input Text Size
+                        <input id="form-placeholder-text-px" type="text" size="4" maxlength="3" value="14" class="enable-txt" />
+                    </li>
+                    <li>
+                        Rounded Input Radius
+                        <input id="form-input-radius-px" type="text" size="4" maxlength="3" value="30" class="enable-txt" />
+                    </li>
+                </ul>
+            </div>
+
+            <div class="side-section-footer">
+                <h4>Contribute some <i class="icon ion-heart"></i> on <a href="https://github.com/" style="color:#6795F5">GitHub <i class="icon ion-social-github fa-lg"></i></a></h4>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="main-panel">
+        <ul class="main-panel-tabs">
+            <li class="tabs-left">
+                <a class="btn-login" href="#loadHelpModal">Help!</a>
+            </li>
+            <li class="tabs-left">
+                <a class="btn-login" href="#loadThemeModal">Load NativeScript Core Theme <i class="icon ion-android-arrow-dropdown fa-lg"></i></a>
+            </li>
+        </ul>
+        <div class="main-panel-view">
+            <div style="padding: 20px 40px 40px 40px;">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="device-bg">
+                            <iframe id="ui-widgets" class="device-screen" src="components/preview-widgets.html"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="device-bg">
+                            <iframe id="ui-listviews-tabs" class="device-screen" src="components/preview-list-tabs.html"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="device-bg">
+                            <iframe id="ui-texts" class="device-screen" src="components/preview-text.html"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="device-bg">
+                            <iframe id="ui-buttons" class="device-screen" src="components/preview-buttons.html"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="device-bg">
+                            <iframe id="ui-forms" class="device-screen" src="components/preview-form.html"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="device-bg">
+                            <iframe id="ui-tabs" class="device-screen" src=""></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="remodal" data-remodal-id="loadThemeModal">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <h1>Load Core Theme</h1>
+
+    <p style="text-align:left">NativeScript ships with a variety of <a href="http://docs.nativescript.org/ui/theme" target="_blank">core themes</a>. If you would like to overwrite any theme edits you have made, choose a theme from the list provided.</p>
+
+    <input type="radio" name="pick-theme" value="light" data-labelauty="NativeScript Core Light Theme" checked />
+    <input type="radio" name="pick-theme" value="dark" data-labelauty="NativeScript Core Dark Theme" />
+    <input type="radio" name="pick-theme" value="bootstrap" data-labelauty="NativeScript Core Bootstrap Theme" />
+
+    <br />
+    <button data-remodal-action="cancel" class="remodal-cancel" id="theme-cancel">Cancel</button>
+    <button data-remodal-action="confirm" class="remodal-confirm" id="theme-ok">OK</button>
+</div>
+
+<div class="remodal" data-remodal-id="loadHelpModal">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <h1>FAQ</h1>
+
+    <div style="text-align:left">
+    
+        <p><b>What is NativeScript?</b></p>
+        <p>NativeScript is an open source framework for building native cross-platform mobile apps with JavaScript/TypeScript. One code base, multiple platforms, using the web skills you know and love. <a href="https://www.nativescript.org/" target="_blank">Learn more about the NativeScript framework.</a></p>
+        
+        <p><b>How do I use CSS with a native mobile app?</b></p>
+        <p>NativeScript uses a subset of CSS for styling apps. The same CSS you use for web development; including id, class, and type selectors. <a href="https://docs.nativescript.org/ui/styling" target="_blank">Learn more about styling your NativeScript app.</a></p>
+        
+        <p><b>The CSS I generate here isn't working with my app!</b></p>
+        <p>Make sure you are following the instructions provided when you download your theme (specifically, make sure you are using one of the core CSS themes along with the one you download). If you're pretty darn sure it's not user error, feel free to submit an issue on Github.</p>
+
+    </div>
+
+    <br />
+    <button data-remodal-action="confirm" class="remodal-confirm">Got It!</button>
+</div>
+
+<div class="remodal" data-remodal-id="loadDownloadModal">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <h1>Download CSS Theme</h1>
+
+    <div style="text-align:left">
+    
+    <p><b>1)</b> Make sure your app is using the core themes introduced with NativeScript 2.4. <a href="https://docs.nativescript.org/ui/theme" target="_blank">Read more about the core themes</a> and follow the instructions to verify you are using them properly.</p>
+
+    <p><b>2)</b> You will be downloading a CSS file. This should be applied to your app <b>after</b> the core theme (since the CSS we generate supplements the core themes). <a href="https://docs.nativescript.org/ui/styling#application-wide-css" target="_blank">More info here.</a></p>
+
+    <p><i>For reference, the core theme you are supplementing is the <code><span id="selected-core-theme">light</span></code> theme.</i></p>
+
+    <p><b>Known Issues (Important!)</b></p>
+
+    <ul style="list-style-type:disc">
+        <li>The color you chose for the Segmented Bar cannot be specified with CSS. You must use the <code>selectedBackgroundColor</code> property of the <code>SegmentedBar</code> element, for example: <code><span id="segmented-example"></span></code>.</li>
+        <li>The colors you chose for the Tab cannot be specified with CSS. You must use the <code>selectedColor</code> and <code>tabsBackgroundColor</code> property of the <code>TabView</code> element, for example: <code><span id="tabview-example"></span></code>.</li>
+        <li>The download process does not properly name the file with Safari.</li>
+        <li>Other issues will be documented on the Github issues page.</li>
+    </ul>
+
+    </div>
+
+    <br />
+    <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+    <button data-remodal-action="confirm" class="remodal-confirm" id="download-css">Download</button>
+</div>
+
+</body>
+</html>

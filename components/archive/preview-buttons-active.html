@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" type="text/css" href="../styles/ionic-hacks-buttons.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/ionic.min.css" />
+
+    <script src="../scripts/ionic.bundle.min.js"></script>
+</head>
+<body ng-app="starter">
+
+<ion-pane>
+    <ion-header-bar class="bar-brand">
+        <h1 class="title">Buttons (Active Background)</h1>
+    </ion-header-bar>
+    <ion-content class="has-header padding-horizontal" >
+        <center>
+            <button class="button button-positive button-clear button-clear-active button-active">btn btn-active</button>
+            <button class="button button-positive button-block button-no-radius button-active btn-primary">btn btn-primary btn-active</button>
+            <button class="button button-positive button-block button-outline button-no-radius button-active">btn btn-outline btn-active</button>
+            <button class="button button-positive button-block button-active btn-primary">btn btn-primary btn-rounded-sm</button>
+            <button class="button button-positive button-block button-outline button-outline-non-active button-active">btn btn-outline btn-rounded-sm</button>
+            <button class="button button-positive button-block button-lg-radius button-non-active button-active btn-primary">btn btn-primary btn-rounded-lg</button>
+            <button class="button button-positive button-block button-outline button-lg-radius button-outline-non-active button-active">btn btn-outline btn-rounded-lg</button>
+        </center>
+    </ion-content>
+</ion-pane>
+<script>
+    angular.module('starter', ['ionic']);
+
+    var css = document.getElementById('ionic-css');
+    window.IonicThemer = {
+        update: function (colors) {
+            var args = [];
+            for (var i = 0; i < colors.length; i++) {
+                args.push(encodeURIComponent(colors[i].variable) + "=" + encodeURIComponent(colors[i].value));
+            }
+            var path = args.join('&');
+            var newUrl = '/api/compile/live/ionic.css?' + path;
+            css.setAttribute('href', newUrl);
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+body, h1, h2, h3, h4, h5, h6, button, .tab-item {
+    font-family: "San Francisco";
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.text-body, .text-body2, .text-footnote {
+    color: #6f6f6f;
+}
+
+.text-body2 {
+    font-size: 16px;
+}
+
+.text-footnote {
+    font-size: 10px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.text-primary {
+    color: #30bcff;
+}
+
+.text-danger {
+    color: #d9534f;
+}
+
+.text-muted {
+    color: #a2a2a2;
+}
+
+.text-bg-primary {
+    background-color: #30bcff;
+    color: white;
+}
+
+.text-bg-danger {
+    background-color: #d9534f;
+    color: white;
+}

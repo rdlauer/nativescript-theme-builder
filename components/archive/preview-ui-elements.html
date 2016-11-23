@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../styles/ionic.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/ionic-hacks-ui-elements.css" />
+    <script src="../scripts/ionic.bundle.min.js"></script>
+</head>
+<body ng-app="starter">
+
+<ion-pane>
+    <ion-header-bar class="bar-brand">
+        <h1 class="title">UI Elements</h1>
+    </ion-header-bar>
+    <ion-content class="has-header">
+
+			<div class="item item-divider">
+				Search Bars
+			</div>
+
+<div class="bar bar-header item-input-inset ui-search">
+  <label class="item-input-wrapper ui-search-input">
+    <i class="icon ion-ios-search placeholder-icon"></i>
+    <input type="search" placeholder="Search">
+  </label>
+</div>
+
+			<div class="item item-divider">
+				Sliders
+			</div>
+
+<div class="item range">
+  <i class="icon ion-volume-low"></i>
+  <input type="range" name="volume">
+  <i class="icon ion-volume-high"></i>
+</div>
+
+			<div class="item item-divider">
+				Progress Indicator
+			</div>
+
+<div class="pace pace-active" style="padding-top:20px;padding-bottom:20px">
+    <div class="pace-progress" data-progress="50" data-progress-text="50%" 
+    style="-webkit-transform: translate3d(50%, 0px, 0px); -ms-transform: translate3d(50%, 0px, 0px); transform: translate3d(50%, 0px, 0px);">
+    <div class="pace-progress-inner"></div>
+    </div>
+    <div class="pace-activity"></div>
+    </div>
+
+
+    </ion-content>
+</ion-pane>
+<script>
+    angular.module('starter', ['ionic']);
+
+    var css = document.getElementById('ionic-css');
+    window.IonicThemer = {
+        update: function (colors) {
+            var args = [];
+            for (var i = 0; i < colors.length; i++) {
+                args.push(encodeURIComponent(colors[i].variable) + "=" + encodeURIComponent(colors[i].value));
+            }
+            var path = args.join('&');
+            var newUrl = '/api/compile/live/ionic.css?' + path;
+            css.setAttribute('href', newUrl);
+        }
+    }
+</script>
+</body>
+</html>

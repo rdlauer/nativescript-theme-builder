@@ -1,0 +1,46 @@
+body, h1, h2, h3, h4, h5, h6, button, .tab-item {
+    font-family: "San Francisco";
+}
+
+.button-no-radius {
+    border-radius: 0px;
+}
+
+.button-lg-radius {
+    border-radius: 30px;
+}
+
+.button-disabled {
+    background-color: #e0e0e0;
+    color: #899299;
+    opacity: 1 !important;
+}
+
+.button-sm-text {
+    font-size: 13px;
+}
+
+/*.button-non-active {
+    border-color: transparent !important;
+    background-color: #387ef5 !important;
+}
+
+.button-non-active:active {
+    color: #6795f5 !important;
+}
+
+.button-outline-non-active {
+    background-color: inherit !important;
+}.button-outline-non-active:active {
+    color: #6795f5 !important;
+}
+
+.button-clear-active {
+    width: 100%;
+    border-radius: 0px;
+}
+
+.button-active:active {
+    background-color: lightblue;
+}
+*/
