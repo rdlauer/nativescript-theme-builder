@@ -13,13 +13,14 @@
     <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
     <link rel="stylesheet" href="styles/remodal.css">
     <link rel="stylesheet" href="styles/remodal-default-theme.css">
-    <link rel="stylesheet" href="styles/jquery-labelauty.css">
+    <link rel="stylesheet" href="styles/skins/minimal/grey.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="scripts/spectrum.js"></script>
     <script src="scripts/remodal.min.js"></script>
-    <script src="scripts/jquery-labelauty.js"></script>
+    <script src="scripts/icheck.min.js"></script>
     <script src="scripts/app-setup.js"></script>
     <script src="scripts/app-download-css.js"></script>
+    <script src="scripts/app-color-themes.js"></script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -53,15 +54,15 @@
                 </div>
                 <ul id="side-global-items">
                     <li>
-                        Font (for simulators)
+                        Simulator View
                         <select id="global-font" class="enable-select">
-                            <option value="San Francisco">San Francisco (iOS)</option>
-                            <option value="Roboto">Roboto (Android)</option>
+                            <option value="ios">iOS</option>
+                            <option value="android">Android</option>
                         </select>
                     </li>
                     <li>
                         Action Bar Color
-                        <input id="global-action-bar" class="enable-cp" />
+                        <input id="global-ab" class="enable-cp" />
                     </li>
                     <li>
                         View Background
@@ -129,25 +130,13 @@
                 </ul>
             </div>
             <div class="side-section">
-                <div id="side-listviews-tabs" class="side-section-header">
-                    Tabs and ListViews
+                <div id="side-listviews" class="side-section-header">
+                    ListViews
                     <button class="btn-revert">
                         <i class="icon icon-lg ion-ios-refresh-empty"></i>
                     </button>
                 </div>
-                <ul id="side-listviews-tabs-items" style="display:none">
-                    <!--<li>
-                        Tab Label Text Size
-                        <input id="tab-label-text-px" type="text" size="4" maxlength="3" value="16" class="enable-txt" />
-                    </li>-->
-                    <li>
-                        Tab Label Text Color
-                        <input id="tab-label-text-color" class="enable-cp" />
-                    </li>
-                    <li>
-                        Tab Bar Color
-                        <input id="tab-bar-color" class="enable-cp" />
-                    </li>
+                <ul id="side-listviews-items" style="display:none">
                     <li>
                         Avatar Border Radius
                         <input id="listitem-avatar-radius-pct" type="text" size="4" maxlength="3" value="30" class="enable-txt" />
@@ -284,6 +273,28 @@
                     </li>
                 </ul>
             </div>
+            <div class="side-section">
+                <div id="side-tabs" class="side-section-header">
+                    Tabs and Drawer
+                    <button class="btn-revert">
+                        <i class="icon icon-lg ion-ios-refresh-empty"></i>
+                    </button>
+                </div>
+                <ul id="side-tabs-items" style="display:none">
+                    <!--<li>
+                        Tab Label Text Size
+                        <input id="tab-label-text-px" type="text" size="4" maxlength="3" value="16" class="enable-txt" />
+                    </li>-->
+                    <li>
+                        Tab Label Text Color
+                        <input id="tab-label-text-color" class="enable-cp" />
+                    </li>
+                    <li>
+                        Tab Bar Color
+                        <input id="tab-bar-color" class="enable-cp" />
+                    </li>
+                </ul>
+            </div>
 
             <div class="side-section-footer">
                 <h4>Contribute some <i class="icon ion-heart"></i> on <a href="https://github.com/" style="color:#6795F5">GitHub <i class="icon ion-social-github fa-lg"></i></a></h4>
@@ -295,10 +306,10 @@
     <div class="main-panel">
         <ul class="main-panel-tabs">
             <li class="tabs-left">
-                <a class="btn-login" href="#loadHelpModal">Help!</a>
+                <a class="btn-login" href="#loadHelpModal">About</a>
             </li>
             <li class="tabs-left">
-                <a class="btn-login" href="#loadThemeModal">Load NativeScript Core Theme <i class="icon ion-android-arrow-dropdown fa-lg"></i></a>
+                <a class="btn-login" href="#loadThemeModal">Load a Color Palette <i class="icon ion-android-arrow-dropdown fa-lg"></i></a>
             </li>
         </ul>
         <div class="main-panel-view">
@@ -311,7 +322,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="device-bg">
-                            <iframe id="ui-listviews-tabs" class="device-screen" src="components/preview-list-tabs.html"></iframe>
+                            <iframe id="ui-listviews" class="device-screen" src="components/preview-list.html"></iframe>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -334,7 +345,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="device-bg">
-                            <iframe id="ui-tabs" class="device-screen" src=""></iframe>
+                            <iframe id="ui-tabs" class="device-screen" src="components/preview-tabs.html"></iframe>
                         </div>
                     </div>
                 </div>
@@ -345,33 +356,273 @@
 
 <div class="remodal" data-remodal-id="loadThemeModal">
     <button data-remodal-action="close" class="remodal-close"></button>
-    <h1>Load Core Theme</h1>
+    <h1>Load a Color Palette</h1>
 
-    <p style="text-align:left">NativeScript ships with a variety of <a href="http://docs.nativescript.org/ui/theme" target="_blank">core themes</a>. If you would like to overwrite any theme edits you have made, choose a theme from the list provided.</p>
+    <p style="text-align:left">NativeScript ships with a variety of <a href="http://docs.nativescript.org/ui/theme" target="_blank">themes</a>. Apply a color scheme to the <code>core light theme</code> by choosing from the palettes provided (or create your own).</p><br />
 
-    <input type="radio" name="pick-theme" value="light" data-labelauty="NativeScript Core Light Theme" checked />
-    <input type="radio" name="pick-theme" value="dark" data-labelauty="NativeScript Core Dark Theme" />
-    <input type="radio" name="pick-theme" value="bootstrap" data-labelauty="NativeScript Core Bootstrap Theme" />
+    <div class="row">
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="1" class="icheck" /> <!-- light -->
+            <input id="1-color-wd" class="enable-cp" value="#30bcff" />
+            <input id="1-color-ab" class="enable-cp" value="#f8f8f8" />
+            <input id="1-color-bg" class="enable-cp" value="#ffffff" />
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="2" class="icheck" /> <!-- dark -->
+            <input id="2-color-wd" class="enable-cp" value="#30bcff" />
+            <input id="2-color-ab" class="enable-cp" value="#404040" />
+            <input id="2-color-bg" class="enable-cp" value="#303030" />
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="3" class="icheck" /> <!-- aqua -->
+            <input id="3-color-wd" class="enable-cp" value="#ade407" />
+            <input id="3-color-ab" class="enable-cp" value="#26d1b6" />
+            <input id="3-color-bg" class="enable-cp" value="#ffffff" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="4" class="icheck" /> <!-- blue -->
+            <input id="4-color-wd" class="enable-cp" value="#30bcff" />
+            <input id="4-color-ab" class="enable-cp" value="#5870fd" />
+            <input id="4-color-bg" class="enable-cp" value="#ffffff" />
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="5" class="icheck" /> <!-- brown -->
+            <input id="5-color-wd" class="enable-cp" value="#aee408" />
+            <input id="5-color-ab" class="enable-cp" value="#8b6d62" />
+            <input id="5-color-bg" class="enable-cp" value="#ffffff" />
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="6" class="icheck" /> <!-- forest -->
+            <input id="6-color-wd" class="enable-cp" value="#00caab" />
+            <input id="6-color-ab" class="enable-cp" value="#257e7d" />
+            <input id="6-color-bg" class="enable-cp" value="#ffffff" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="7" class="icheck" /> <!-- grey -->
+            <input id="7-color-wd" class="enable-cp" value="#aee407" />
+            <input id="7-color-ab" class="enable-cp" value="#00caab" />
+            <input id="7-color-bg" class="enable-cp" value="#ffffff" />
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="8" class="icheck" /> <!-- lemon -->
+            <input id="8-color-wd" class="enable-cp" value="#5c687c" />
+            <input id="8-color-ab" class="enable-cp" value="#aee407" />
+            <input id="8-color-bg" class="enable-cp" value="#ffffff" />
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="9" class="icheck" /> <!-- lime -->
+            <input id="9-color-wd" class="enable-cp" value="#006967" />
+            <input id="9-color-ab" class="enable-cp" value="#b9e72a" />
+            <input id="9-color-bg" class="enable-cp" value="#ffffff" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="10" class="icheck" /> <!-- orange -->
+            <input id="10-color-wd" class="enable-cp" value="#785547" />
+            <input id="10-color-ab" class="enable-cp" value="#006967" />
+            <input id="10-color-bg" class="enable-cp" value="#ffffff" />
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="11" class="icheck" /> <!-- purple -->
+            <input id="11-color-wd" class="enable-cp" value="#31bcff" />
+            <input id="11-color-ab" class="enable-cp" value="#914cfd" />
+            <input id="11-color-bg" class="enable-cp" value="#ffffff" />
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="12" class="icheck" /> <!-- ruby -->
+            <input id="12-color-wd" class="enable-cp" value="#ffe901" />
+            <input id="12-color-ab" class="enable-cp" value="#fe385e" />
+            <input id="12-color-bg" class="enable-cp" value="#ffffff" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="13" class="icheck" /> <!-- sky -->
+            <input id="13-color-wd" class="enable-cp" value="#ffe901" />
+            <input id="13-color-ab" class="enable-cp" value="#4dc5fe" />
+            <input id="13-color-bg" class="enable-cp" value="#ffffff" />
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="14" class="icheck" />
+            <input id="14-color-wd" class="enable-cp" value="#5DFDCB" />
+            <input id="14-color-ab" class="enable-cp" value="#7CC6FE" />
+            <input id="14-color-bg" class="enable-cp" value="#F4FAFF" />
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="15" class="icheck" />
+            <input id="15-color-wd" class="enable-cp" value="#444" />
+            <input id="15-color-ab" class="enable-cp" value="#3c948b" />
+            <input id="15-color-bg" class="enable-cp" value="#f4f4f4" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="16" class="icheck" />
+            <input id="16-color-wd" class="enable-cp" value="#343434" />
+            <input id="16-color-ab" class="enable-cp" value="#df6c4f" />
+            <input id="16-color-bg" class="enable-cp" value="#d4d5d6" />
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="17" class="icheck" />
+            <input id="17-color-wd" class="enable-cp" value="#265762" />
+            <input id="17-color-ab" class="enable-cp" value="#5eab9b" />
+            <input id="17-color-bg" class="enable-cp" value="#fafeff" />
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="18" class="icheck" />
+            <input id="18-color-wd" class="enable-cp" value="#823551" />
+            <input id="18-color-ab" class="enable-cp" value="#d6c7d1" />
+            <input id="18-color-bg" class="enable-cp" value="#fafeff" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="19" class="icheck" />
+            <input id="19-color-wd" class="enable-cp" value="#696b73" />
+            <input id="19-color-ab" class="enable-cp" value="#bbb7b6" />
+            <input id="19-color-bg" class="enable-cp" value="#ffffff" />
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="20" class="icheck" />
+            <input id="20-color-wd" class="enable-cp" value="#35478c" />
+            <input id="20-color-ab" class="enable-cp" value="#4e7ac7" />
+            <input id="20-color-bg" class="enable-cp" value="#fafeff" />
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="21" class="icheck" />
+            <input id="21-color-wd" class="enable-cp" value="#ea6045" />
+            <input id="21-color-ab" class="enable-cp" value="#f8ca4d" />
+            <input id="21-color-bg" class="enable-cp" value="#f5e5c0" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="22" class="icheck" />
+            <input id="22-color-wd" class="enable-cp" value="#282828" />
+            <input id="22-color-ab" class="enable-cp" value="#ea2e4d" />
+            <input id="22-color-bg" class="enable-cp" value="#ffffff" />
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="23" class="icheck" />
+            <input id="23-color-wd" class="enable-cp" value="#272f32" />
+            <input id="23-color-ab" class="enable-cp" value="#9dbdc6" />
+            <input id="23-color-bg" class="enable-cp" value="#ffffff" />
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="24" class="icheck" />
+            <input id="24-color-wd" class="enable-cp" value="#2c5e2e" />
+            <input id="24-color-ab" class="enable-cp" value="#70b85d" />
+            <input id="24-color-bg" class="enable-cp" value="#fafeff" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="25" class="icheck" />
+            <input id="25-color-wd" class="enable-cp" value="#2d2d38" />
+            <input id="25-color-ab" class="enable-cp" value="#e86e48" />
+            <input id="25-color-bg" class="enable-cp" value="#ffffe8" />
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="26" class="icheck" />
+            <input id="26-color-wd" class="enable-cp" value="#412726" />
+            <input id="26-color-ab" class="enable-cp" value="#b70129" />
+            <input id="26-color-bg" class="enable-cp" value="#ffffe8" />
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="27" class="icheck" />
+            <input id="27-color-wd" class="enable-cp" value="#0092fa" />
+            <input id="27-color-ab" class="enable-cp" value="#73c2fb" />
+            <input id="27-color-bg" class="enable-cp" value="#c8e5fa" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="28" class="icheck" />
+            <input id="28-color-wd" class="enable-cp" value="#5c4b51" />
+            <input id="28-color-ab" class="enable-cp" value="#8cbeb2" />
+            <input id="28-color-bg" class="enable-cp" value="#ffffff" />
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="29" class="icheck" />
+            <input id="29-color-wd" class="enable-cp" value="#f06060" />
+            <input id="29-color-ab" class="enable-cp" value="#f3b562" />
+            <input id="29-color-bg" class="enable-cp" value="#ffffff" />
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="30" class="icheck" />
+            <input id="30-color-wd" class="enable-cp" value="#191923" />
+            <input id="30-color-ab" class="enable-cp" value="#0E79B2" />
+            <input id="30-color-bg" class="enable-cp" value="#FBFEF9" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="31" class="icheck" />
+            <input id="31-color-wd" class="enable-cp" value="#191923" />
+            <input id="31-color-ab" class="enable-cp" value="#BF1363" />
+            <input id="31-color-bg" class="enable-cp" value="#FBFEF9" />
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="32" class="icheck" />
+            <input id="32-color-wd" class="enable-cp" value="#191923" />
+            <input id="32-color-ab" class="enable-cp" value="#F39237" />
+            <input id="32-color-bg" class="enable-cp" value="#FBFEF9" />
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="33" class="icheck" />
+            <input id="33-color-wd" class="enable-cp" value="#EE4266" />
+            <input id="33-color-ab" class="enable-cp" value="#FFD23F" />
+            <input id="33-color-bg" class="enable-cp" value="#F3FCF0" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="34" class="icheck" />
+            <input id="34-color-wd" class="enable-cp" value="#0075F2" />
+            <input id="34-color-ab" class="enable-cp" value="#7F675B" />
+            <input id="34-color-bg" class="enable-cp" value="#FFEAEE" />
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="35" class="icheck" />
+            <input id="35-color-wd" class="enable-cp" value="#663F46" />
+            <input id="35-color-ab" class="enable-cp" value="#B8C4BB" />
+            <input id="35-color-bg" class="enable-cp" value="#E8F7EE" />
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="color-scheme" value="36" class="icheck" />
+            <input id="36-color-wd" class="enable-cp" value="#326273" />
+            <input id="36-color-ab" class="enable-cp" value="#5C9EAD" />
+            <input id="36-color-bg" class="enable-cp" value="#FFFFFF" />
+        </div>
+    </div>
 
     <br />
-    <button data-remodal-action="cancel" class="remodal-cancel" id="theme-cancel">Cancel</button>
+    <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
     <button data-remodal-action="confirm" class="remodal-confirm" id="theme-ok">OK</button>
 </div>
 
 <div class="remodal" data-remodal-id="loadHelpModal">
     <button data-remodal-action="close" class="remodal-close"></button>
-    <h1>FAQ</h1>
+    <h1>About</h1>
 
     <div style="text-align:left">
     
-        <p><b>What is NativeScript?</b></p>
-        <p>NativeScript is an open source framework for building native cross-platform mobile apps with JavaScript/TypeScript. One code base, multiple platforms, using the web skills you know and love. <a href="https://www.nativescript.org/" target="_blank">Learn more about the NativeScript framework.</a></p>
+        <h3>What is NativeScript?</h3>
+        <p><a href="https://www.nativescript.org/" target="_blank">NativeScript</a> is an open source framework for building cross-platform native mobile apps with JavaScript/TypeScript. One code base, multiple platforms, using the web skills you know and love.</a></p>
+
+        <h3>How do I get started with NativeScript?</h3>
+        <p>There are getting started tutorials for <a href="http://docs.nativescript.org/angular/tutorial/ng-chapter-0" target="_blank">TypeScript + Angular 2</a> or <a href="http://docs.nativescript.org/tutorial/chapter-0" target="_blank">vanilla JavaScript</a>.</p>
         
-        <p><b>How do I use CSS with a native mobile app?</b></p>
-        <p>NativeScript uses a subset of CSS for styling apps. The same CSS you use for web development; including id, class, and type selectors. <a href="https://docs.nativescript.org/ui/styling" target="_blank">Learn more about styling your NativeScript app.</a></p>
+        <h3>How do I use CSS with a native mobile app?</h3>
+        <p>NativeScript uses a <a href="https://docs.nativescript.org/ui/styling" target="_blank">subset of CSS</a> for styling apps. The same CSS you use for web development (including id, class, and type selectors)..</p>
         
-        <p><b>The CSS I generate here isn't working with my app!</b></p>
-        <p>Make sure you are following the instructions provided when you download your theme (specifically, make sure you are using one of the core CSS themes along with the one you download). If you're pretty darn sure it's not user error, feel free to submit an issue on Github.</p>
+        <h3>The CSS I generate here isn't working with my app!</h3>
+        <p>Be sure to follow the instructions provided when you download your theme. If you're pretty darn sure it's not user error, feel free to <a href="#" target="_blank">submit an issue</a> on Github!</p>
 
     </div>
 
@@ -385,19 +636,22 @@
 
     <div style="text-align:left">
     
-    <p><b>1)</b> Make sure your app is using the core themes introduced with NativeScript 2.4. <a href="https://docs.nativescript.org/ui/theme" target="_blank">Read more about the core themes</a> and follow the instructions to verify you are using them properly.</p>
+    <p><b>Step 1)</b> Make sure your app is using the <code>core light theme</code> introduced with NativeScript 2.4. <a href="https://docs.nativescript.org/ui/theme" target="_blank">Read more about the core themes</a> and follow the instructions to verify you are using them properly.</p>
 
-    <p><b>2)</b> You will be downloading a CSS file. This should be applied to your app <b>after</b> the core theme (since the CSS we generate supplements the core themes). <a href="https://docs.nativescript.org/ui/styling#application-wide-css" target="_blank">More info here.</a></p>
+    <p><b>Step 2)</b> You will be downloading a CSS file. This should be applied to your app <b>after</b> the core theme (since the CSS file we provide supplements the <code>core light theme</code>). For example:</p>
 
-    <p><i>For reference, the core theme you are supplementing is the <code><span id="selected-core-theme">light</span></code> theme.</i></p>
+    <pre><code>
+        @import 'nativescript-theme-core/css/core.light.css';
+        @import 'css/custom.css';
+    </code></pre>
 
-    <p><b>Known Issues (Important!)</b></p>
+    <p><b>Step 3)</b> Review these known issues:</p>
 
     <ul style="list-style-type:disc">
         <li>The color you chose for the Segmented Bar cannot be specified with CSS. You must use the <code>selectedBackgroundColor</code> property of the <code>SegmentedBar</code> element, for example: <code><span id="segmented-example"></span></code>.</li>
         <li>The colors you chose for the Tab cannot be specified with CSS. You must use the <code>selectedColor</code> and <code>tabsBackgroundColor</code> property of the <code>TabView</code> element, for example: <code><span id="tabview-example"></span></code>.</li>
         <li>The download process does not properly name the file with Safari.</li>
-        <li>Other issues will be documented on the Github issues page.</li>
+        <li>Other issues will be documented on the <a href="#" target="_blank">Github issues page</a>.</li>
     </ul>
 
     </div>

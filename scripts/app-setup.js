@@ -25,7 +25,7 @@ $(function() {
     $(".enable-cp").each(function(i, obj) {
         $(this).spectrum({
             allowEmpty: false,
-            color: "#6795f5",
+            //color: "#6795f5",
             showInput: true,
             showInitial: true,
             showPalette: true,
@@ -64,8 +64,8 @@ $(function() {
 	$("#side-widgets").click(function(){
 		$("#side-widgets-items").slideToggle("fast");
 	});
-	$("#side-listviews-tabs").click(function(){
-		$("#side-listviews-tabs-items").slideToggle("fast");
+	$("#side-listviews").click(function(){
+		$("#side-listviews-items").slideToggle("fast");
 	});
 	$("#side-text").click(function(){
 		$("#side-text-items").slideToggle("fast");
@@ -76,31 +76,41 @@ $(function() {
 	$("#side-form-elements").click(function(){
 		$("#side-form-elements-items").slideToggle("fast");
 	});
+	$("#side-tabs").click(function(){
+		$("#side-tabs-items").slideToggle("fast");
+	});
 
-	// enable prettied radio buttons
-    $(".remodal :radio").labelauty();
-
-    $("#theme-ok").click(function(){
-        $("#core-theme").val($("input[name=pick-theme]:checked").val());
-		$("#selected-core-theme").text($("input[name=pick-theme]:checked").val());
-    });
-
-    $("#theme-cancel").click(function(){
-		var value = $("#core-theme").val();
-		$("input[name=pick-theme][value=" + value + "]").prop("checked", true);
-    });
-
-	// hack to change font (just for simulator)
+	// hack to change between ios/android font and header style for simulators
 	$("#global-font").on("change", function() {
-		console.log($(this).val());
-		$(".device-screen").contents().find("body").attr("style", "font-family: " + $(this).val());
-		$(".device-screen").contents().find("h1").attr("style", "font-family: " + $(this).val());
-		$(".device-screen").contents().find("h2").attr("style", "font-family: " + $(this).val());
-		$(".device-screen").contents().find("h3").attr("style", "font-family: " + $(this).val());
-		$(".device-screen").contents().find("h4").attr("style", "font-family: " + $(this).val());
-		$(".device-screen").contents().find("h5").attr("style", "font-family: " + $(this).val());
-		$(".device-screen").contents().find("h6").attr("style", "font-family: " + $(this).val());
-		$(".device-screen").contents().find("button").attr("style", "font-family: " + $(this).val());
+		var os = $(this).val();
+		
+		// font
+		var font;
+
+		if (os == "ios") {
+			font = "San Francisco";
+		} else if (os == "android") {
+			font = "Roboto";
+		}
+
+		$(".device-screen").contents().find("body, h1, h2, h3, h4, h5, h6, button, .tab-item").attr("style", "font-family: " + font);
+
+		// header
+		if (os == "ios") {
+			$(".device-screen").contents().find(".bar-positive").removeClass("header-md");
+		} else if (os == "android") {
+			$(".device-screen").contents().find(".bar-positive").addClass("header-md");
+		}
+
+		// device chrome
+		if (os == "ios") {
+			$(".device-bg").removeClass("device-bg-android");
+			$(".device-screen").removeClass("device-screen-android");
+		} else if (os == "android") {
+			$(".device-bg").addClass("device-bg-android");
+			$(".device-screen").addClass("device-screen-android");
+		}
+
 	});
 
 });

@@ -1,0 +1,23 @@
+body, h1, h2, h3, h4, h5, h6, button, .tab-item {
+    font-family: "San Francisco";
+}
+
+.header-md::after {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-image: url("../images/header-md.png");
+    background-repeat: repeat-x;
+    background-position: 0 -1px;
+    content: "";
+}
+
+.header-md .title {
+    text-align: left;
+}
+
+.bar .title {
+	font-size: 19px;
+}

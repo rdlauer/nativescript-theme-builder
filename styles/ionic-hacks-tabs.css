@@ -1,5 +1,7 @@
-body, h1, h2, h3, h4, h5, h6, button, .tab-item {
-    font-family: "San Francisco";
+@import url("ionic-hacks-global.css");
+
+.header-md .title {
+    padding-left: 40px;
 }
 
 .tab-title {
@@ -32,10 +34,11 @@ body, h1, h2, h3, h4, h5, h6, button, .tab-item {
     height: 100%;
 }
 
-/*.tabs-content {
+.tabs-content {
     padding: 50px 10px 0px 10px;
 }
 
+/*
 .tabs {
     border-color: #b2b2b2 !important;
 }*/

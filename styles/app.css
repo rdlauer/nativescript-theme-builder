@@ -23,8 +23,17 @@ ul {
 }
 
 .remodal a:hover {
-    color: white;
+    color: darkgrey;
     text-decoration: none;
+}
+
+.remodal pre {
+    padding: 0px;
+}
+
+.remodal code {
+    color: #444;
+    background-color: #f5f5f5;
 }
 
 /*a {
@@ -224,7 +233,8 @@ ul {
     position: relative;
     float: right;
     margin-right: 8px;
-    display: inline-block;
+    /*display: inline-block;*/
+    display: none;
     background-color: transparent;
     padding-top: 5px;
     border: none;
@@ -453,9 +463,6 @@ ul {
 
 .device-bg {
     background-image: url("../images/ios.png");
-    /*background-size: 259px 528px;
-    height: 528px;
-    width: 259px;*/
     background-size: 320px 654px;
     height: 654px;
     width: 320px;
@@ -463,34 +470,27 @@ ul {
     margin-right: auto;
 }
 
+.device-bg-android {
+    background-image: url("../images/android.png");
+}
+
 .device-screen {
     position: relative;
     z-index: 0;
-    /*
-    original:
-    top: 68px;
-    left: 18px;
-    width: 337px;
-    height: 597px;
-    w/ new ios img:
-    top: 82px;
-    left: 22px;
-    width: 418px;
-    height: 750px;
-    */
     top: 82px;
     left: 22px;
     width: 278px;
     height: 500px;
-    border: 2px solid #22272d; /* */
+    border: 2px solid #22272d;
     background-color: white;
-    /*-ms-zoom: 0.665;
-    -moz-transform: scale(0.665);
-    -moz-transform-origin: 0 0;
-    -o-transform: scale(0.665);
-    -o-transform-origin: 0 0;
-    -webkit-transform: scale(0.665);
-    -webkit-transform-origin: 0 0;*/
+}
+
+.device-screen-android {
+    top: 65px;
+    left: 15px;
+    width: 288px;
+    height: 515px;
+    border: 2px solid #000;
 }
 
 .icon-lg {

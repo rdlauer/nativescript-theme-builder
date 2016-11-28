@@ -1,0 +1,9 @@
+@import url("ionic-hacks-global.css");
+
+.list-tabs-content {
+    padding-top: 44px;
+}
+
+.tab-title {
+    font-size: 14px;
+}

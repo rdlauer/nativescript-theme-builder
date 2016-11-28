@@ -1,7 +1,7 @@
 [
 	{
 		"__comment": "action bar color",
-        "id": "global-action-bar",
+        "id": "global-ab",
 		"iframe": [
 			{
 				"id": "ui-widgets"
@@ -13,10 +13,13 @@
 				"id": "ui-forms"
 			},
 			{
-				"id": "ui-listviews-tabs"
+				"id": "ui-listviews"
 			},
 			{
 				"id": "ui-texts"
+			},
+			{
+				"id": "ui-tabs"
 			}
 		],
         "web": [
@@ -44,10 +47,14 @@
 				"id": "ui-forms"
 			},
 			{
-				"id": "ui-listviews-tabs"
+				"id": "ui-listviews"
 			},
 			{
 				"id": "ui-texts"
+			}
+            ,
+			{
+				"id": "ui-tabs"
 			}
 		],
         "web": [
@@ -310,60 +317,11 @@
         ]
     },
     {
-		"__comment": "tab label text size (NOT CURRENTLY USE DUE TO CSS ISSUES)",
-        "id": "tab-label-text-px",
-		"iframe": [
-			{
-				"id": "ui-listviews-tabs"
-			}
-		],
-        "web": [
-            {
-                "class": ".tab-item",
-                "attr": "font-size"
-            }
-        ]
-    },
-    {
-		"__comment": "tab label text color",
-        "id": "tab-label-text-color",
-		"iframe": [
-			{
-				"id": "ui-listviews-tabs"
-			}
-		],
-        "web": [
-            {
-                "class": ".tab-item",
-                "attr": "color"
-            },
-            {
-                "class": ".tab-title",
-                "attr": "color"
-            }
-        ]
-    },
-    {
-		"__comment": "tab bar color",
-        "id": "tab-bar-color",
-		"iframe": [
-			{
-				"id": "ui-listviews-tabs"
-			}
-		],
-        "web": [
-            {
-                "class": ".tabs",
-                "attr": "background-color"
-            }
-        ]
-    },
-    {
 		"__comment": "avatar border radius",
         "id": "listitem-avatar-radius-pct",
 		"iframe": [
 			{
-				"id": "ui-listviews-tabs"
+				"id": "ui-listviews"
 			}
 		],
         "web": [
@@ -384,7 +342,7 @@
         "id": "listitem-heading-size-px",
 		"iframe": [
 			{
-				"id": "ui-listviews-tabs"
+				"id": "ui-listviews"
 			}
 		],
         "web": [
@@ -405,7 +363,7 @@
         "id": "listitem-subheading-size-px",
 		"iframe": [
 			{
-				"id": "ui-listviews-tabs"
+				"id": "ui-listviews"
 			}
 		],
         "web": [
@@ -426,7 +384,7 @@
         "id": "listitem-thumb-radius-pct",
 		"iframe": [
 			{
-				"id": "ui-listviews-tabs"
+				"id": "ui-listviews"
 			}
 		],
         "web": [
@@ -939,6 +897,64 @@
             {
                 "class": ".input-rounded",
                 "attr": "border-radius"
+            }
+        ]
+    },
+    {
+		"__comment": "tab label text size (NOT CURRENTLY USE DUE TO CSS ISSUES)",
+        "id": "tab-label-text-px",
+		"iframe": [
+			{
+				"id": "ui-tabs"
+			},
+            {
+				"id": "ui-listviews"
+			}
+		],
+        "web": [
+            {
+                "class": ".tab-item",
+                "attr": "font-size"
+            }
+        ]
+    },
+    {
+		"__comment": "tab label text color",
+        "id": "tab-label-text-color",
+		"iframe": [
+			{
+				"id": "ui-tabs"
+			},
+            {
+				"id": "ui-listviews"
+			}
+		],
+        "web": [
+            {
+                "class": ".tab-item",
+                "attr": "color"
+            },
+            {
+                "class": ".tab-title",
+                "attr": "color"
+            }
+        ]
+    },
+    {
+		"__comment": "tab bar color",
+        "id": "tab-bar-color",
+		"iframe": [
+			{
+				"id": "ui-tabs"
+			},
+            {
+				"id": "ui-listviews"
+			}
+		],
+        "web": [
+            {
+                "class": ".tabs",
+                "attr": "background-color"
             }
         ]
     }
