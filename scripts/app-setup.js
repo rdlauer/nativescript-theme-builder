@@ -30,7 +30,7 @@ $(function() {
             showInitial: true,
             showPalette: true,
             preferredFormat: "hex",
-            localStorageKey: "tnstheme." + $(this).attr("id"),
+            //localStorageKey: "tnstheme." + $(this).attr("id"),
             palette: palette,
             change: function(color) {
                 updateCSS($(this).attr("id"), color.toHexString());
@@ -93,7 +93,7 @@ $(function() {
 			font = "Roboto";
 		}
 
-		$(".device-screen").contents().find("body, h1, h2, h3, h4, h5, h6, button, .tab-item").attr("style", "font-family: " + font);
+		$(".device-screen").contents().find("body, h1, h2, h3, h4, h5, h6, button, .tab-item").css("style", "font-family: " + font);
 
 		// header
 		if (os == "ios") {
@@ -134,6 +134,16 @@ function updateCSS(id, str) {
 						}
 					});
 				});
+
+				// have a lot of exceptions to add contrasting text colors when necessary!
+				if (id == "global-ab") {
+					// when setting action bar, make sure text is contrasting
+					$(".device-screen").contents().find(".bar.bar-positive .title").css("color", idealTextColor(str));
+				} else if (id == "ios-seg-bar-text-active") {
+					// when setting segmented bar text, add contrasting ios "selected" text color
+					$("#ui-widgets").contents().find(".segment-ios .segment-button.segment-activated").css("color", idealTextColor(str));
+				}
+
 				return;
 			}
 
@@ -151,5 +161,30 @@ function updateCSS(id, str) {
 			// });
 
 		});
+
+		// let's reset the item-divider to always be the basic grey color
+		$("#ui-widgets").contents().find(".item-divider").css("background-color", "#f5f5f5");
 	});
+}
+
+function idealTextColor(bgColor) {
+
+   var nThreshold = 105;
+   var components = getRGBComponents(bgColor);
+   var bgDelta = (components.R * 0.299) + (components.G * 0.587) + (components.B * 0.114);
+
+   return ((255 - bgDelta) < nThreshold) ? "#000000" : "#ffffff";   
+}
+
+function getRGBComponents(color) {       
+
+    var r = color.substring(1, 3);
+    var g = color.substring(3, 5);
+    var b = color.substring(5, 7);
+
+    return {
+       R: parseInt(r, 16),
+       G: parseInt(g, 16),
+       B: parseInt(b, 16)
+    };
 }

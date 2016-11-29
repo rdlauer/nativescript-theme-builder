@@ -51,8 +51,7 @@
 			},
 			{
 				"id": "ui-texts"
-			}
-            ,
+			},
 			{
 				"id": "ui-tabs"
 			}
@@ -73,6 +72,60 @@
             {
                 "class": ".item-stacked-label input",
                 "attr": "background-color"
+            },
+            {
+                "class": ".menu",
+                "attr": "background-color"
+            }
+        ]
+    },
+	{
+		"__comment": "text color",
+        "id": "global-text",
+		"iframe": [
+			{
+				"id": "ui-widgets"
+			},
+			{
+				"id": "ui-buttons"
+			},
+			{
+				"id": "ui-forms"
+			},
+			{
+				"id": "ui-listviews"
+			},
+			{
+				"id": "ui-texts"
+			},
+			{
+				"id": "ui-tabs"
+			}
+		],
+        "web": [
+            {
+                "class": ".text-sizes-no-color",
+                "attr": "color"
+            },
+            {
+                "class": ".list .item",
+                "attr": "color"
+            },
+            {
+                "class": ".list .item h2, .list .item p",
+                "attr": "color"
+            },
+            {
+                "class": ".text-headings h1, .text-headings h2, .text-headings h3, .text-headings h4, .text-headings h5, .text-headings h6",
+                "attr": "color"
+            },
+            {
+                "class": ".input-label",
+                "attr": "color"
+            },
+            {
+                "class": ".tabs-content, .tabs-content h2",
+                "attr": "color"
             }
         ]
     },
