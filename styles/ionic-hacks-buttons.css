@@ -18,6 +18,15 @@
     font-size: 13px;
 }
 
+.btn-android-shadow {
+    box-shadow: 0 0 5px #999;
+}
+
+.btn-android-text {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
 /*.button-non-active {
     border-color: transparent !important;
     background-color: #387ef5 !important;

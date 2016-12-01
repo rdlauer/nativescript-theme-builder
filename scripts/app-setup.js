@@ -111,6 +111,14 @@ $(function() {
 			$(".device-screen").addClass("device-screen-android");
 		}
 
+		// button text and box shadow
+		if (os == "ios") {
+			$("#ui-buttons").contents().find(".button").removeClass("btn-android-shadow btn-android-text");
+		} else if (os == "android") {
+			$("#ui-buttons").contents().find(".btn-primary, .button-outline").addClass("btn-android-shadow");
+			$("#ui-buttons").contents().find(".button").addClass("btn-android-text");
+		}
+
 	});
 
 });
