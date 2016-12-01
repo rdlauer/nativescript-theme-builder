@@ -641,13 +641,15 @@
 
     <div style="text-align:left">
     
-    <p><b>Step 1)</b> Make sure your app is using the <code>core light theme</code> introduced with NativeScript 2.4. <a href="https://docs.nativescript.org/ui/theme" target="_blank">Read more about the core themes</a> and follow the instructions to verify you are using them properly.</p>
+    <p><b>Step 1)</b> Make sure your app is using the <b>core light theme</b> introduced with NativeScript 2.4. <a href="https://docs.nativescript.org/ui/theme" target="_blank">Read more about the core themes</a> and follow the instructions to verify you are using them properly.</p>
 
-    <p><b>Step 2)</b> You will be downloading a CSS file. This should be applied to your app <b>after</b> the core theme (since the CSS file we provide supplements the <code>core light theme</code>). For example:</p>
+    <p><b>Step 2)</b> You will be downloading a CSS file. The contents should be applied to your app <b>after</b> the core theme (since the CSS file we provide supplements the <b>core light theme</b>).</p>
+    
+    <p>For example, when initializing your app in <code>app.js</code> you will set the default CSS file: <code>application.cssFile = "app.css";</code>. This <code>app.css</code> file should reference both the core light theme and your downloaded CSS file like so:</p>
 
     <pre><code>
         @import 'nativescript-theme-core/css/core.light.css';
-        @import 'css/custom.css';
+        @import '&lt;your css directory&gt;/custom.css';
     </code></pre>
 
     <p><b>Step 3)</b> Review these known issues:</p>
