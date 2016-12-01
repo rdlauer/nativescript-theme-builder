@@ -31,6 +31,12 @@
                 "class": ".bar-positive",
                 "attr": "border-color"
             }
+        ],
+        "tns": [
+            {
+                "class": ".action-bar",
+                "attr": "background-color"
+            }
         ]
     },
 	{
@@ -75,6 +81,12 @@
             },
             {
                 "class": ".menu",
+                "attr": "background-color"
+            }
+        ],
+        "tns": [
+            {
+                "class": ".page",
                 "attr": "background-color"
             }
         ]
@@ -125,6 +137,12 @@
             },
             {
                 "class": ".tabs-content, .tabs-content h2",
+                "attr": "color"
+            }
+        ],
+        "tns": [
+            {
+                "class": ".page",
                 "attr": "color"
             }
         ]

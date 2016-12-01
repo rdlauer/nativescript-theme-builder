@@ -40,6 +40,10 @@ $(function() {
 					var iframe = valueIframe.id;
 					// loop through tns css attributes
 					$.each(value.tns, function (index, valueTns) {
+						// exception (addition) for action bar text color, which is programmatically determined
+						if (valueTns.class == ".action-bar") {
+							css += valueTns.class + " {" + n + "color: " + idealTextColor(output) + ";" + n + "}" + n + n;
+						}
 						css += valueTns.class + " {" + n + valueTns.attr + ": " + output + ";" + n + "}" + n + n;
 					});
 				});
