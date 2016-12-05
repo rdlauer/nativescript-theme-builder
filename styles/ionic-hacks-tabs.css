@@ -12,10 +12,6 @@
     border-color: #b2b2b2 !important;
 }
 
-.list-tabs-content {
-    padding-top: 44px;
-}
-
 .item-text-center
 {
     display: -webkit-box;
@@ -36,6 +32,10 @@
 
 .tabs-content {
     padding: 50px 10px 0px 10px;
+}
+
+.tabs-content-android {
+    padding-top: 100px;
 }
 
 /*

@@ -37,9 +37,17 @@ $(function() {
 
 				// loop through tns values
 				$.each(value.tns, function (index, valueTns) {
-					// exception (addition) for action bar text color, which is programmatically determined
 					if (valueTns.class == ".action-bar") {
+						// exception (addition) for action bar text color, which is programmatically determined
 						css += valueTns.class + " {" + n + "color: " + idealTextColor(output) + ";" + n + "}" + n + n;
+					} else if (valueTns.class == ".switch[checked=true]" || valueTns.class == ".slider") {
+						// also an exception for the switch and slider circle colors
+						css += valueTns.class + " {" + n + "color: " + idealTextColor(output) + ";" + n + "}" + n + n;
+					} else if (valueTns.class == ".btn-outline" && valueTns.attr == "color") {
+						// need to tweak the btn-outline background color transparency
+						css += valueTns.class + " {" + n + "background-color: transparent;" + n + "}" + n + n;
+						// need to add back the border-width property for android
+						css += valueTns.class + " {" + n + "border-width: 1;" + n + "}" + n + n;
 					}
 					css += valueTns.class + " {" + n + valueTns.attr + ": " + output + ";" + n + "}" + n + n;
 				});

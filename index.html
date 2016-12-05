@@ -65,7 +65,7 @@
                         <input id="global-ab" class="enable-cp" />
                     </li>
                     <li>
-                        View Background
+                        View Background Color
                         <input id="global-bg" class="enable-cp" />
                     </li>
                     <li>
@@ -143,7 +143,7 @@
                 <ul id="side-listviews-items" style="display:none">
                     <li>
                         Avatar Border Radius
-                        <input id="listitem-avatar-radius-pct" type="text" size="4" maxlength="3" value="30" class="enable-txt" />
+                        <input id="listitem-avatar-radius-px" type="text" size="4" maxlength="3" value="20" class="enable-txt" />
                     </li>
                     <li>
                         Item Heading Size
@@ -154,8 +154,8 @@
                         <input id="listitem-subheading-size-px" type="text" size="4" maxlength="3" value="14" class="enable-txt" />
                     </li>
                     <li>
-                        Thumbnail Border Radius
-                        <input id="listitem-thumb-radius-pct" type="text" size="4" maxlength="3" value="0" class="enable-txt"  />
+                        Rounded Thumbnail Border Radius
+                        <input id="listitem-thumb-radius-px" type="text" size="4" maxlength="3" value="5" class="enable-txt"  />
                     </li>
                 </ul>
             </div>
@@ -197,15 +197,15 @@
                     </li>
                     <li>
                         "Primary" Color
-                        <input id="text-primary-color" class="enable-cp" />
+                        <input id="text-primary-color" class="enable-cp" value="#30bcff" />
                     </li>
                     <li>
                         "Danger" Color
-                        <input id="text-danger-color" class="enable-cp" />
+                        <input id="text-danger-color" class="enable-cp" value="#d9534f" />
                     </li>
                     <li>
                         "Muted" Color
-                        <input id="text-muted-color" class="enable-cp" />
+                        <input id="text-muted-color" class="enable-cp" value="#a2a2a2" />
                     </li>
                 </ul>
             </div>
@@ -219,7 +219,7 @@
                 <ul id="side-buttons-items" style="display:none">
                     <li>
                         Plain Button Text Color
-                        <input id="buttons-plain-text-color" class="enable-cp" />
+                        <input id="buttons-plain-color" class="enable-cp" />
                     </li>
                     <li>
                         Primary Button Background Color
@@ -227,7 +227,7 @@
                     </li>
                     <li>
                         Primary Button Text Color
-                        <input id="buttons-primary-text-color" class="enable-cp" />
+                        <input id="buttons-primary-lbl-color" class="enable-cp" />
                     </li>
                     <li>
                         Outlined Button Border Color
@@ -235,7 +235,7 @@
                     </li>
                     <li>
                         Outlined Button Text Color
-                        <input id="buttons-outline-text-color" class="enable-cp" />
+                        <input id="buttons-outline-color" class="enable-cp" />
                     </li>
                     <li>
                         Disabled Button Background Color
@@ -243,7 +243,7 @@
                     </li>
                     <li>
                         Disabled Button Text Color
-                        <input id="buttons-disabled-text-color" class="enable-cp" />
+                        <input id="buttons-disabled-lbl-color" class="enable-cp" />
                     </li>
                     <li>
                         Small Rounded Button Radius
@@ -251,7 +251,7 @@
                     </li>
                     <li>
                         Large Rounded Button Radius
-                        <input id="buttons-rounded-lg-px" type="text" size="4" maxlength="3" value="30" class="enable-txt" />
+                        <input id="buttons-rounded-lg-px" type="text" size="4" maxlength="3" value="20" class="enable-txt" />
                     </li>
                 </ul>
             </div>
@@ -291,11 +291,35 @@
                     </li>-->
                     <li>
                         Tab Label Text Color
-                        <input id="tab-label-text-color" class="enable-cp" />
+                        <input id="tab-label-text-color" class="enable-cp" value="#fff" />
                     </li>
                     <li>
                         Tab Bar Color
                         <input id="tab-bar-color" class="enable-cp" />
+                    </li>
+                    <li>
+                        Drawer Header Background Color
+                        <input id="drawer-header-ab" class="enable-cp" />
+                    </li>
+                    <li>
+                        Drawer Header Text Color
+                        <input id="drawer-header-text-color" class="enable-cp" value="#fff" />
+                    </li>
+                    <li>
+                        Drawer Item Background Color
+                        <input id="drawer-item-bg" class="enable-cp" />
+                    </li>
+                    <li>
+                        Drawer Item Text Color
+                        <input id="drawer-item-text-color" class="enable-cp" />
+                    </li>
+                    <li>
+                        Selected Drawer Background Color
+                        <input id="drawer-item-sel-bg" class="enable-cp" />
+                    </li>
+                    <li>
+                        Selected Drawer Text Color
+                        <input id="drawer-item-sel-text-color" class="enable-cp" />
                     </li>
                 </ul>
             </div>
@@ -645,11 +669,11 @@
 
     <p><b>Step 2)</b> You will be downloading a CSS file. The contents should be applied to your app <b>after</b> the core theme (since the CSS file we provide supplements the <b>core light theme</b>).</p>
     
-    <p>For example, when initializing your app in <code>app.js</code> you will set the default CSS file: <code>application.cssFile = "app.css";</code>. This <code>app.css</code> file should reference both the core light theme and your downloaded CSS file like so:</p>
+    <p>For example, when initializing your app in <code>app.js</code> set the default CSS file: <code>application.cssFile = "app.css";</code>. This <code>app.css</code> file should import both the core light theme and your downloaded CSS file:</p>
 
     <pre><code>
-        @import 'nativescript-theme-core/css/core.light.css';
-        @import '&lt;your css directory&gt;/custom.css';
+        @import '&lt;your css directory&gt;/core.light.css'; /* nativescript-provided core light theme */
+        @import '&lt;your css directory&gt;/custom.css'; /* this downloaded theme */
     </code></pre>
 
     <p><b>Step 3)</b> Review these known issues:</p>

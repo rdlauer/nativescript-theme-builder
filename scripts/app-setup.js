@@ -40,7 +40,8 @@ $(function() {
 
 	// enable the change event on all eligible sidebar text inputs
 	$(".enable-txt").each(function(i, obj) {
-		$(this).change(function() {
+		//$(this).change(function() {
+		$(this).on("change keyup paste click", function(){
 			var val = $(this).val().trim();
 			if (val.length > 0) {
 				var id = $(this).attr("id");
@@ -85,15 +86,11 @@ $(function() {
 		var os = $(this).val();
 		
 		// font
-		var font;
-
 		if (os == "ios") {
-			font = "San Francisco";
+			$(".device-screen").contents().find("body, h1, h2, h3, h4, h5, h6, button, .tab-item").css("style", "font-family: San Francisco");
 		} else if (os == "android") {
-			font = "Roboto";
+			$(".device-screen").contents().find("body, h1, h2, h3, h4, h5, h6, button, .tab-item").css("style", "font-family: Roboto");
 		}
-
-		$(".device-screen").contents().find("body, h1, h2, h3, h4, h5, h6, button, .tab-item").css("style", "font-family: " + font);
 
 		// header
 		if (os == "ios") {
@@ -117,6 +114,19 @@ $(function() {
 		} else if (os == "android") {
 			$("#ui-buttons").contents().find(".btn-primary, .button-outline").addClass("btn-android-shadow");
 			$("#ui-buttons").contents().find(".button").addClass("btn-android-text");
+		}
+
+		// move tabs to top/bottom
+		if (os == "ios") {
+			$("#ui-listviews").contents().find(".tabs-positive").removeClass("tabs-striped tabs-top");
+			$("#ui-listviews").contents().find(".list-tabs-content").removeClass("list-tabs-content-android");
+			$("#ui-tabs").contents().find(".tabs-positive").removeClass("tabs-striped tabs-top");
+			$("#ui-tabs").contents().find(".tabs-content").removeClass("tabs-content-android");
+		} else if (os == "android") {
+			$("#ui-listviews").contents().find(".tabs-positive").addClass("tabs-striped tabs-top");
+			$("#ui-listviews").contents().find(".list-tabs-content").addClass("list-tabs-content-android");
+			$("#ui-tabs").contents().find(".tabs-positive").addClass("tabs-striped tabs-top");
+			$("#ui-tabs").contents().find(".tabs-content").addClass("tabs-content-android");
 		}
 
 	});
@@ -146,7 +156,7 @@ function updateCSS(id, str) {
 				// have a lot of exceptions to add contrasting text colors when necessary!
 				if (id == "global-ab") {
 					// when setting action bar, make sure text is contrasting
-					$(".device-screen").contents().find(".bar.bar-positive .title").css("color", idealTextColor(str));
+					$(".device-screen").contents().find(".pane .bar.bar-positive .title").css("color", idealTextColor(str));
 				} else if (id == "ios-seg-bar-text-active") {
 					// when setting segmented bar text, add contrasting ios "selected" text color
 					$("#ui-widgets").contents().find(".segment-ios .segment-button.segment-activated").css("color", idealTextColor(str));

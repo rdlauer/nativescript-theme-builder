@@ -4,6 +4,14 @@
     padding-top: 44px;
 }
 
+.list-tabs-content-android {
+    padding-top: 88px;
+}
+
+.item-thumbnail-left img {
+    border-radius: 5px;
+}
+
 .tab-title {
     font-size: 14px;
 }

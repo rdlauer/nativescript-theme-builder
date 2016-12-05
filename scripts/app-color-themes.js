@@ -62,12 +62,13 @@ function acceptColorTheme() {
 			if (cpId.match(/-pct$/) || cpId.match(/-px$/) || 
 			cpId == "global-text" || cpId == "tab-label-text-color" ||
 			cpId == "buttons-primary-text-color" || cpId == "buttons-disabled-text-color" ||
-			cpId == "text-primary-color" || cpId == "text-danger-color" || cpId == "text-muted-color") {
+			cpId == "text-primary-color" || cpId == "text-danger-color" || cpId == "text-muted-color" ||
+			cpId == "drawer-header-text-color" || cpId == "drawer-item-text-color" || cpId == "drawer-item-sel-text-color") {
 				cp = false;
 			}
 
 			if (cp === true) {
-				if (cpId.match(/-ab$/)) { // actionbar color
+				if (cpId.match(/-ab$/) || cpId.indexOf("lbl") !== -1) { // actionbar color or a button label
 					color = actionBarColor;
 				} else if (cpId.match(/-bg$/)) { // background color
 					color = backgroundColor;

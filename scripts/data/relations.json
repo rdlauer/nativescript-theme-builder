@@ -24,11 +24,11 @@
 		],
         "web": [
             {
-                "class": ".bar-positive",
+                "class": ".pane .bar-positive",
                 "attr": "background-color"
             },
             {
-                "class": ".bar-positive",
+                "class": ".pane .bar-positive",
                 "attr": "border-color"
             }
         ],
@@ -72,7 +72,7 @@
                 "attr": "background-color"
             },
             {
-                "class": ".item",
+                "class": ".scroll .item",
                 "attr": "background-color"
             },
             {
@@ -120,7 +120,7 @@
                 "attr": "color"
             },
             {
-                "class": ".list .item",
+                "class": ".scroll .list .item",
                 "attr": "color"
             },
             {
@@ -142,7 +142,7 @@
         ],
         "tns": [
             {
-                "class": ".page",
+                "class": ".page label, .tab-view label",
                 "attr": "color"
             }
         ]
@@ -389,7 +389,7 @@
     },
     {
 		"__comment": "avatar border radius",
-        "id": "listitem-avatar-radius-pct",
+        "id": "listitem-avatar-radius-px",
 		"iframe": [
 			{
 				"id": "ui-listviews"
@@ -452,7 +452,7 @@
     },
     {
 		"__comment": "thumbnail border radius",
-        "id": "listitem-thumb-radius-pct",
+        "id": "listitem-thumb-radius-px",
 		"iframe": [
 			{
 				"id": "ui-listviews"
@@ -466,7 +466,7 @@
         ],
         "tns": [
             {
-                "class": ".img-thumbnail",
+                "class": ".img-rounded",
                 "attr": "border-radius"
             }
         ]
@@ -652,11 +652,11 @@
         ],
         "tns": [
             {
-                "class": ".text-primary",
+                "class": ".page label.text-primary, .tab-view label.text-primary",
                 "attr": "color"
             },
             {
-                "class": ".bg-primary",
+                "class": ".page label.bg-primary, .tab-view label.bg-primary",
                 "attr": "background-color"
             }
         ]
@@ -681,11 +681,11 @@
         ],
         "tns": [
             {
-                "class": ".text-danger",
+                "class": ".page label.text-danger, .tab-view label.text-danger",
                 "attr": "color"
             },
             {
-                "class": ".bg-danger",
+                "class": ".page label.bg-danger, .tab-view label.bg-danger",
                 "attr": "background-color"
             }
         ]
@@ -706,14 +706,14 @@
         ],
         "tns": [
             {
-                "class": ".text-muted",
+                "class": ".page label.text-muted, .tab-view label.text-muted",
                 "attr": "color"
             }
         ]
     },
     {
 		"__comment": "plain button text color",
-        "id": "buttons-plain-text-color",
+        "id": "buttons-plain-color",
 		"iframe": [
 			{
 				"id": "ui-buttons"
@@ -759,7 +759,7 @@
     },
     {
 		"__comment": "primary button text color",
-        "id": "buttons-primary-text-color",
+        "id": "buttons-primary-lbl-color",
 		"iframe": [
 			{
 				"id": "ui-buttons"
@@ -801,7 +801,7 @@
     },
     {
 		"__comment": "outlined button text color",
-        "id": "buttons-outline-text-color",
+        "id": "buttons-outline-color",
 		"iframe": [
 			{
 				"id": "ui-buttons"
@@ -847,7 +847,7 @@
     },
     {
 		"__comment": "disabled button text color",
-        "id": "buttons-disabled-text-color",
+        "id": "buttons-disabled-lbl-color",
 		"iframe": [
 			{
 				"id": "ui-buttons"
@@ -1026,6 +1026,124 @@
             {
                 "class": ".tabs",
                 "attr": "background-color"
+            }
+        ]
+    },
+    {
+		"__comment": "drawer header background color",
+        "id": "drawer-header-ab",
+		"iframe": [
+			{
+				"id": "ui-tabs"
+			}
+		],
+        "web": [
+            {
+                "class": ".menu .bar-positive",
+                "attr": "background-color"
+            },
+            {
+                "class": ".menu .bar-positive",
+                "attr": "border-color"
+            }
+        ],
+        "tns": [
+            {
+                "class": ".sidedrawer-header",
+                "attr": "background-color"
+            }
+        ]
+    },
+    {
+		"__comment": "drawer header text color",
+        "id": "drawer-header-text-color",
+		"iframe": [
+			{
+				"id": "ui-tabs"
+			}
+		],
+        "web": [
+            {
+                "class": ".menu .title",
+                "attr": "color"
+            }
+        ],
+        "tns": [
+            {
+                "class": ".sidedrawer-header-brand",
+                "attr": "color"
+            }
+        ]
+    },
+    {
+		"__comment": "drawer item background color",
+        "id": "drawer-item-bg",
+		"iframe": [
+			{
+				"id": "ui-tabs"
+			}
+		],
+        "web": [
+            {
+                "class": ".menu-wrapper .list .item",
+                "attr": "background-color"
+            }
+        ],
+        "tns": [
+            {
+                "class": ".sidedrawer-content",
+                "attr": "background-color"
+            }
+        ]
+    },
+    {
+		"__comment": "drawer item text color",
+        "id": "drawer-item-text-color",
+		"iframe": [
+			{
+				"id": "ui-tabs"
+			}
+		],
+        "web": [
+            {
+                "class": ".menu-wrapper .list .item",
+                "attr": "color"
+            }
+        ],
+        "tns": [
+            {
+                "class": ".sidedrawer-list-item",
+                "attr": "color"
+            }
+        ]
+    },
+    {
+		"__comment": "selected drawer item bg color (NO WEB EQUIVALENT)",
+        "id": "drawer-item-sel-bg",
+		"iframe": [
+			{
+				"id": "ui-tabs"
+			}
+		],
+        "tns": [
+            {
+                "class": ".sidedrawer-list-item.active",
+                "attr": "background-color"
+            }
+        ]
+    },
+    {
+		"__comment": "selected drawer item text color (NO WEB EQUIVALENT)",
+        "id": "drawer-item-sel-text-color",
+		"iframe": [
+			{
+				"id": "ui-tabs"
+			}
+		],
+        "tns": [
+            {
+                "class": ".sidedrawer-list-item.active",
+                "attr": "color"
             }
         ]
     }
