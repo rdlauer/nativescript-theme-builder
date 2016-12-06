@@ -63,7 +63,7 @@ function acceptColorTheme() {
 			cpId == "global-text" || cpId == "tab-label-text-color" ||
 			cpId == "buttons-primary-text-color" || cpId == "buttons-disabled-text-color" ||
 			cpId == "text-primary-color" || cpId == "text-danger-color" || cpId == "text-muted-color" ||
-			cpId == "drawer-header-text-color" || cpId == "drawer-item-text-color" || cpId == "drawer-item-sel-text-color") {
+			cpId == "drawer-header-text-color" || cpId == "drawer-item-text-color" || cpId == "drawer-item-sel-text-color" || cpId == "ios-seg-bar-text-ios-active") {
 				cp = false;
 			}
 
@@ -77,6 +77,11 @@ function acceptColorTheme() {
 				}
 
 				$("#" + cpId).spectrum("set", color);
+				$("#" + cpId).spectrum("container").find("button.sp-choose").click();
+			}
+
+			// sometimes we still have to override the default colors
+			if (cpId == "ios-seg-bar-text-ios-active") {
 				$("#" + cpId).spectrum("container").find("button.sp-choose").click();
 			}
 		});

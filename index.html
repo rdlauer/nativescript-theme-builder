@@ -88,12 +88,12 @@
                         <input id="ios-seg-bar" class="enable-cp" />
                     </li>
                     <li>
-                        Segmented Bar Text (iOS Inactive)
-                        <input id="ios-seg-bar-text-inactive" class="enable-cp" />
+                        Segmented Bar Text (iOS Active)
+                        <input id="ios-seg-bar-text-ios-active" class="enable-cp" value="#fff" />
                     </li>
                     <li>
                         Segmented Bar Text
-                        <input id="ios-seg-bar-text-active" class="enable-cp" />
+                        <input id="ios-seg-bar-text" class="enable-cp" />
                     </li>
                     <!--<li>
                         Android Segmented Bar Color
@@ -296,6 +296,10 @@
                     <li>
                         Tab Bar Color
                         <input id="tab-bar-color" class="enable-cp" />
+                    </li>
+                    <li>
+                        Tab Border Color (Android)
+                        <input id="tab-android-highlight-color-ab" class="enable-cp" />
                     </li>
                     <li>
                         Drawer Header Background Color
@@ -679,8 +683,8 @@
     <p><b>Step 3)</b> Review these known issues:</p>
 
     <ul style="list-style-type:disc">
-        <li>The color you chose for the Segmented Bar cannot be specified with CSS. You must use the <code>selectedBackgroundColor</code> property of the <code>SegmentedBar</code> element, for example: <code><span id="segmented-example"></span></code>.</li>
-        <li>The colors you chose for the Tab cannot be specified with CSS. You must use the <code>selectedColor</code> and <code>tabsBackgroundColor</code> property of the <code>TabView</code> element, for example: <code><span id="tabview-example"></span></code>.</li>
+        <!--<li>The color you chose for the Segmented Bar cannot be specified with CSS. You must use the <code>selectedBackgroundColor</code> property of the <code>SegmentedBar</code> element, for example: <code><span id="segmented-example"></span></code>.</li>-->
+        <!--<li>The colors you chose for the Tab cannot be specified with CSS. You must use the <code>selectedColor</code> and <code>tabsBackgroundColor</code> property of the <code>TabView</code> element, for example: <code><span id="tabview-example"></span></code>.</li>-->
         <li>The download process does not properly name the CSS file with Safari.</li>
         <li>Other issues will be documented on the <a href="https://github.com/rdlauer/nativescript-theme-builder/issues" target="_blank">Github issues page</a>.</li>
     </ul>

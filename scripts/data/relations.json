@@ -88,6 +88,14 @@
             {
                 "class": ".page",
                 "attr": "background-color"
+            },
+            {
+                "class": ".tab-view",
+                "attr": "background-color"
+            },
+            {
+                "class": ".list-group",
+                "attr": "background-color"
             }
         ]
     },
@@ -168,11 +176,17 @@
                 "class": ".segment-md .segment-button.segment-activated",
                 "attr": "border-color"
             }
+        ],
+        "tns": [
+            {
+                "class": ".segmented-bar",
+                "attr": "selected-background-color"
+            }
         ]
     },
     {
-		"__comment": "ios segmented bar text (inactive)",
-        "id": "ios-seg-bar-text-inactive",
+		"__comment": "ios segmented bar text (ios active)",
+        "id": "ios-seg-bar-text-ios-active",
 		"iframe": [
 			{
 				"id": "ui-widgets"
@@ -180,20 +194,20 @@
 		],
         "web": [
             {
-                "class": ".segment-button-inactive-ios",
+                "class": ".segment-active-ios",
                 "attr": "color"
             }
         ],
         "tns": [
             {
                 "class": ".segmented-bar",
-                "attr": "color"
+                "attr": "selected-text-color"
             }
         ]
     },
     {
-		"__comment": "ios segmented bar text (active)",
-        "id": "ios-seg-bar-text-active",
+		"__comment": "ios segmented bar text",
+        "id": "ios-seg-bar-text",
 		"iframe": [
 			{
 				"id": "ui-widgets"
@@ -201,7 +215,7 @@
 		],
         "web": [
             {
-                "class": ".segment-ios .segment-button.segment-activated",
+                "class": ".segment-ios .segment-button-inactive-ios",
                 "attr": "color"
             },
             {
@@ -212,7 +226,7 @@
         "tns": [
             {
                 "class": ".segmented-bar",
-                "attr": "background-color"
+                "attr": "color"
             }
         ]
     },
@@ -1009,6 +1023,16 @@
                 "class": ".tab-title",
                 "attr": "color"
             }
+        ],
+        "tns": [
+            {
+                "class": ".tab-view",
+                "attr": "selected-tab-text-color"
+            },
+            {
+                "class": ".tab-view",
+                "attr": "tab-text-color"
+            }
         ]
     },
     {
@@ -1026,6 +1050,36 @@
             {
                 "class": ".tabs",
                 "attr": "background-color"
+            }
+        ],
+        "tns": [
+            {
+                "class": ".tab-view",
+                "attr": "tab-background-color"
+            }
+        ]
+    },
+    {
+		"__comment": "tab border color (android)",
+        "id": "tab-android-highlight-color-ab",
+		"iframe": [
+			{
+				"id": "ui-tabs"
+			},
+            {
+				"id": "ui-listviews"
+			}
+		],
+        "web": [
+            {
+                "class": ".tab-item.tab-item-active",
+                "attr": "border-color"
+            }
+        ],
+        "tns": [
+            {
+                "class": ".tab-view",
+                "attr": "android-selected-tab-highlight-color"
             }
         ]
     },
