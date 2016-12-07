@@ -94,7 +94,7 @@
                 "attr": "background-color"
             },
             {
-                "class": ".list-group",
+                "class": ".list-group, .list-group-item",
                 "attr": "background-color"
             }
         ]
@@ -181,27 +181,6 @@
             {
                 "class": ".segmented-bar",
                 "attr": "selected-background-color"
-            }
-        ]
-    },
-    {
-		"__comment": "ios segmented bar text (ios active)",
-        "id": "ios-seg-bar-text-ios-active",
-		"iframe": [
-			{
-				"id": "ui-widgets"
-			}
-		],
-        "web": [
-            {
-                "class": ".segment-active-ios",
-                "attr": "color"
-            }
-        ],
-        "tns": [
-            {
-                "class": ".segmented-bar",
-                "attr": "selected-text-color"
             }
         ]
     },

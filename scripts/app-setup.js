@@ -158,10 +158,10 @@ function updateCSS(id, str) {
 					// when setting action bar, make sure text is contrasting
 					$(".device-screen").contents().find(".pane .bar.bar-positive .title").css("color", idealTextColor(str));
 				}
-				// else if (id == "ios-seg-bar-text-active") {
-				// 	// when setting segmented bar text, add contrasting ios "selected" text color
-				// 	$("#ui-widgets").contents().find(".segment-ios .segment-button.segment-activated").css("color", idealTextColor(str));
-				// }
+				else if (id == "ios-seg-bar") {
+					// when setting segmented bar text, add contrasting ios "selected" text color
+					$("#ui-widgets").contents().find(".segment-ios .segment-button.segment-activated").css("color", idealTextColor(str));
+				}
 
 				return;
 			}
