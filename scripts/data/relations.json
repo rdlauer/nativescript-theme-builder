@@ -230,6 +230,31 @@
             }
         ]
     },
+	{
+		"__comment": "ios segmented bar background color",
+        "id": "ios-seg-bar-bg",
+		"iframe": [
+			{
+				"id": "ui-widgets"
+			}
+		],
+        "web": [
+            {
+                "class": ".segment-button-inactive-ios",
+                "attr": "background-color"
+            },
+            {
+                "class": ".segment-md .segment-button",
+                "attr": "background-color"
+            }
+        ],
+        "tns": [
+            {
+                "class": ".segmented-bar",
+                "attr": "background-color"
+            }
+        ]
+    },
     {
 		"__comment": "android segmented bar color (NOT CURRENTLY USED)",
         "id": "android-seg-bar",

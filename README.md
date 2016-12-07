@@ -14,6 +14,10 @@ As of v2.4, NativeScript ships with a gorgeous default theme. This theme builder
 
 NativeScript uses a subset of CSS to style apps. Yes, the same CSS you've been using for web development. You can apply CSS to individual elements by id, classes, and types. Read more about [styling with NativeScript here](https://docs.nativescript.org/ui/styling).
 
+## NativeScript Compatibility
+
+- Verified compatibility with themes that ship with NativeScript 2.4.1.
+
 ## License
 
 MIT
