@@ -108,6 +108,33 @@ $(function() {
 			$(".device-screen").addClass("device-screen-android");
 		}
 
+		// ui widgets
+		if (os == "ios") {
+			// segmented bar
+			$("#ui-widgets").contents().find("#ios-seg-bar").show();
+			$("#ui-widgets").contents().find("#android-seg-bar").hide();
+			// switch
+			$("#ui-widgets").contents().find("#ios-switch").show();
+			$("#ui-widgets").contents().find("#android-switch").hide();
+			// activity indicator
+			$("#ui-widgets").contents().find("#ios-activity").show();
+			$("#ui-widgets").contents().find("#android-activity").hide();
+			// slider
+			$("#ui-widgets").contents().find("#slider").removeClass("range-md").addClass("range-ios");
+		} else if (os == "android") {
+			// segmented bar
+			$("#ui-widgets").contents().find("#ios-seg-bar").hide();
+			$("#ui-widgets").contents().find("#android-seg-bar").show();
+			// switch
+			$("#ui-widgets").contents().find("#ios-switch").hide();
+			$("#ui-widgets").contents().find("#android-switch").show();
+			// activity indicator
+			$("#ui-widgets").contents().find("#ios-activity").hide();
+			$("#ui-widgets").contents().find("#android-activity").show();
+			// slider
+			$("#ui-widgets").contents().find("#slider").removeClass("range-ios").addClass("range-md");
+		}
+
 		// button text and box shadow
 		if (os == "ios") {
 			$("#ui-buttons").contents().find(".button").removeClass("btn-android-shadow btn-android-text");

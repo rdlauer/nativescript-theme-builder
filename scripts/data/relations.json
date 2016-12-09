@@ -373,8 +373,8 @@
 		],
         "web": [
             {
-                "class": ".range input",
-                "attr": "background-image"
+                "class": ".range-bar-active",
+                "attr": "background-color"
             }
         ],
         "tns": [
