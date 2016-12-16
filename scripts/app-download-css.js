@@ -66,14 +66,15 @@ function downloadURI(uri, name) {
 	// document.body.removeChild(link);
 	// delete link;
 
+	var isChrome = !!window.chrome && !!window.chrome.webstore;
     var link = document.createElement("a");
 
-    if (link.download !== undefined) {
+    if (isChrome && link.download !== undefined) {
         link.setAttribute("href", uri);
         link.setAttribute("download", name);
         link.click();
 		delete link;
     } else {
-        alert("CSS export only works in Chrome, Firefox, and Opera.");
+        alert("Sorry, but CSS export only works in Chrome (yes, we are looking into a fix)!");
     }
 }
