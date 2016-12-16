@@ -1,10 +1,6 @@
 $(function() {
 
 	$("#download-theme").click(function() {
-		// HACK - need to temporarily (I hope) show code examples for segmented bar and tabview
-		$("#segmented-example").text("<SegmentedBar selectedBackgroundColor='" + $("#ios-seg-bar").spectrum("get") +"'>");
-		$("#tabview-example").text("<TabView selectedColor='" + $("#tab-label-text-color").spectrum("get") +"' tabsBackgroundColor='" + $("#tab-bar-color").spectrum("get") +"'>");
-		
 		// open the download modal
 		var inst = $("[data-remodal-id=loadDownloadModal]").remodal();
 		inst.open();
@@ -62,11 +58,22 @@ $(function() {
 });
 
 function downloadURI(uri, name) {
-	var link = document.createElement("a");
-	link.download = name;
-	link.href = uri;
-	document.body.appendChild(link);
-	link.click();
-	document.body.removeChild(link);
-	delete link;
+	// var link = document.createElement("a");
+	// link.download = name;
+	// link.href = uri;
+	// document.body.appendChild(link);
+	// link.click();
+	// document.body.removeChild(link);
+	// delete link;
+
+    var link = document.createElement("a");
+
+    if (link.download !== undefined) {
+        link.setAttribute("href", uri);
+        link.setAttribute("download", name);
+        link.click();
+		delete link;
+    } else {
+        alert("CSS export only works in Chrome, Firefox, and Opera.");
+    }
 }
