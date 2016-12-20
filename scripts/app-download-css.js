@@ -9,7 +9,8 @@ $(function() {
 	// magical code to create and download a file on the client side
 	$("#download-css").click(function() {
 
-		var n = "%0D%0A"; // new line
+		//var n = "%0D%0A"; // new line
+		var n = "\n";
 		
 		$.getJSON("scripts/data/relations.json", function(data){
 
