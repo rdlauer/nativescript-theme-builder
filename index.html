@@ -344,6 +344,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a class="btn-login" href="#loadHelpModal">About</a>
             </li>
             <li class="tabs-left">
+                <a class="btn-login" href="#loadImport">Import <i class="icon ion-android-arrow-dropdown fa-lg"></i></a>
+            </li>
+            <li class="tabs-left">
                 <a class="btn-login" href="#loadThemeModal">Load a Color Palette <i class="icon ion-android-arrow-dropdown fa-lg"></i></a>
             </li>
         </ul>
@@ -699,6 +702,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <br />
     <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
     <button data-remodal-action="confirm" class="remodal-confirm" id="download-css">Download</button>
+</div>
+
+<div class="remodal" data-remodal-id="loadImport">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <h1>About</h1>
+
+    <div style="text-align:left">
+    
+        <h3>Import Custom CSS</h3>
+        <p>If you have previously created a custom theme here and would like to import that generated CSS file, you've come to the right place!</p>
+        <p><b>Please note:</b> If you have altered the structure of the file significantly, your mileage may vary with the import tool.</p>
+
+        <p><input type="file" id="file" name="file" enctype="multipart/form-data" /></p>
+
+    </div>
+
+    <br />
+    <button data-remodal-action="confirm" class="remodal-confirm">Done!</button>
 </div>
 
 <link rel="stylesheet" type="text/css" href="styles/app.css" />

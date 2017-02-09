@@ -158,6 +158,9 @@ $(function() {
 
 	});
 
+	// css file import event listener (see app-color-themes.js)
+	document.getElementById('file').addEventListener('change', readCSSFile, false);
+
 });
 
 // id = id of color picker or whatever widget from sidebar
@@ -214,7 +217,6 @@ function updateCSS(id, str) {
 }
 
 function idealTextColor(bgColor) {
-
    var nThreshold = 105;
    var components = getRGBComponents(bgColor);
    var bgDelta = (components.R * 0.299) + (components.G * 0.587) + (components.B * 0.114);
@@ -222,8 +224,7 @@ function idealTextColor(bgColor) {
    return ((255 - bgDelta) < nThreshold) ? "#000000" : "#ffffff";   
 }
 
-function getRGBComponents(color) {       
-
+function getRGBComponents(color) {
     var r = color.substring(1, 3);
     var g = color.substring(3, 5);
     var b = color.substring(5, 7);
