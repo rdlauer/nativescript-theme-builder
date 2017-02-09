@@ -141,6 +141,9 @@ function readCSSFile(evt) {
 		}
 	}
 	reader.readAsText(file)
+
+	// reset the form field
+	$("#file").val("");
 }
 
 function setCSSFileValue(myClass, myAttr, myVal) {
