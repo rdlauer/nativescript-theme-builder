@@ -3,9 +3,13 @@ $(function() {
 	// enable prettied radio buttons for color theme modal
 	$(".icheck").iCheck({radioClass: "iradio_minimal-grey"});
 
-    $("#theme-ok").click(function(){
+	$("#loadThemeModal .iCheck-helper").click(function() {
+		$("#theme-ok").click();
+	});
+
+	$("#theme-ok").click(function() {
 		acceptColorTheme();
-    });
+	});
 
 	// pre-select a theme when all iframes are loaded
 	var widgetsLoaded = false,
@@ -83,7 +87,7 @@ function acceptColorTheme() {
 
 function isColor(cpId) {
 	// function tells us whether or not a given input is a color picker or not ***that should be overridden when we choose a theme***
-	if (cpId.match(/-pct$/) || cpId.match(/-px$/) || 
+	if (cpId.match(/-pct$/) || cpId.match(/-px$/) ||
 	cpId == "global-text" || cpId == "tab-label-text-color" ||
 	cpId == "buttons-primary-text-color" || cpId == "buttons-disabled-text-color" ||
 	cpId == "text-primary-color" || cpId == "text-danger-color" || cpId == "text-muted-color" ||
@@ -105,16 +109,16 @@ function isColorPicker(cpId) {
 
 function readCSSFile(evt) {
 	var files = evt.target.files;
-	var file = files[0];           
+	var file = files[0];
 	var reader = new FileReader();
 	reader.onload = function() {
-		//console.log(this.result);      
+		//console.log(this.result);
 		var lines = this.result.split('\n');
 		var myClass = "";
 		var myAttr = "";
 		var myVal = "";
 		var lineAV;
-		
+
 		for (var i = 0; i < lines.length; i++) {
 			var line = lines[i].replace('{', '').replace('}','').trim();
 
