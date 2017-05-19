@@ -392,7 +392,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </div>
 
-<div class="remodal" data-remodal-id="loadThemeModal">
+<div class="remodal" data-remodal-id="loadThemeModal" id="loadThemeModal">
     <button data-remodal-action="close" class="remodal-close"></button>
     <h1>Load a Color Palette</h1>
 
@@ -649,19 +649,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h1>About</h1>
 
     <div style="text-align:left">
-    
+
         <h3>What is NativeScript?</h3>
         <p><a href="https://www.nativescript.org/" target="_blank">NativeScript</a> is an open source framework for building cross-platform native mobile apps with JavaScript/TypeScript. One code base, multiple platforms, using the web skills you know and love.</a></p>
 
         <h3>How do I get started with NativeScript?</h3>
         <p>There are getting started tutorials for <a href="http://docs.nativescript.org/angular/tutorial/ng-chapter-0" target="_blank">TypeScript + Angular 2</a> or <a href="http://docs.nativescript.org/tutorial/chapter-0" target="_blank">vanilla JavaScript</a>.</p>
-        
+
         <h3>Is there a kitchen sink example (like I see in the simulators here)?</h3>
         <p>Why yes there is! Feel free to <a href="https://github.com/NativeScript/theme" target="_blank">clone this GitHub repo</a> which contains screens that are almost identical to those you see displayed in the simulators.</p>
 
         <h3>How do I use CSS with a native mobile app?</h3>
         <p>NativeScript uses a <a href="https://docs.nativescript.org/ui/styling" target="_blank">subset of CSS</a> for styling apps. The same CSS you use for web development (including id, class, and type selectors).</p>
-        
+
         <h3>The CSS I generate here isn't working with my app!</h3>
         <p>Be sure to follow the instructions provided when you download your theme. If you're pretty darn sure it's not user error, feel free to <a href="https://github.com/rdlauer/nativescript-theme-builder/issues" target="_blank">submit an issue</a> on Github!</p>
 
@@ -676,13 +676,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h1>Download CSS Theme</h1>
 
     <div style="text-align:left">
-    
+
     <p><b>Step 1)</b> Make sure your app is using the <b>core light theme</b> introduced with NativeScript 2.4. <a href="https://docs.nativescript.org/ui/theme" target="_blank">Read more about the core themes</a> and follow the instructions to verify you are using them properly.</p>
 
     <p><b>Step 2)</b> Verify that all native widgets you want to style have the proper CSS classes applied to them. For example, a <code>SegmentedBar</code> element should have the <code>segmented-bar</code> class applied, such as: <code>&lt;SegmentedBar class="segmented-bar"&gt;</code>. Discover all the class ids using the <a href="https://github.com/NativeScript/theme/tree/master/app/pages" target="_blank">NativeScript theme kitchen sink repo on GitHub</a>.</p>
 
     <p><b>Step 3)</b> You will be downloading a CSS file. The contents should be applied to your app <b>after</b> the core theme (since the CSS file we provide supplements the <b>core light theme</b>).</p>
-    
+
     <p>For example, when initializing your app in <code>app.js</code> set the default CSS file: <code>application.cssFile = "app.css";</code>. This <code>app.css</code> file should import both the core light theme and your downloaded CSS file:</p>
 
     <pre><code>
@@ -709,7 +709,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h1>About</h1>
 
     <div style="text-align:left">
-    
+
         <h3>Import Custom CSS</h3>
         <p>If you have previously created a custom theme here and would like to import that generated CSS file, you've come to the right place!</p>
         <p><b>Please note:</b> If you have altered the structure of the file significantly, your mileage may vary with the import tool.</p>
