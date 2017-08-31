@@ -91,7 +91,7 @@
             },
             {
                 "class": ".tab-view",
-                "attr": "background-color"
+                "attr": "tab-background-color"
             },
             {
                 "class": ".list-group, .list-group-item",
