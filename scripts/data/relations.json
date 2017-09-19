@@ -24,11 +24,11 @@
 		],
         "web": [
             {
-                "class": ".pane .bar-positive",
+                "class": ".pane .bar-positive--transparent",
                 "attr": "background-color"
             },
             {
-                "class": ".pane .bar-positive",
+                "class": ".pane .bar-positive--transparent",
                 "attr": "border-color"
             }
         ],
@@ -1097,11 +1097,11 @@
 		],
         "web": [
             {
-                "class": ".menu .bar-positive",
+                "class": ".menu .bar-positive--transparent",
                 "attr": "background-color"
             },
             {
-                "class": ".menu .bar-positive",
+                "class": ".menu .bar-positive--transparent",
                 "attr": "border-color"
             }
         ],

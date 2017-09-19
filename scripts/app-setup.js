@@ -94,9 +94,9 @@ $(function() {
 
 		// header
 		if (os == "ios") {
-			$(".device-screen").contents().find(".bar-positive").removeClass("header-md");
+			$(".device-screen").contents().find(".bar-positive--transparent").removeClass("header-md");
 		} else if (os == "android") {
-			$(".device-screen").contents().find(".bar-positive").addClass("header-md");
+			$(".device-screen").contents().find(".bar-positive--transparent").addClass("header-md");
 		}
 
 		// device chrome
@@ -145,14 +145,14 @@ $(function() {
 
 		// move tabs to top/bottom
 		if (os == "ios") {
-			$("#ui-listviews").contents().find(".tabs-positive").removeClass("tabs-striped tabs-top");
+			$("#ui-listviews").contents().find(".tabs-positive--transparent").removeClass("tabs-striped tabs-top");
 			$("#ui-listviews").contents().find(".list-tabs-content").removeClass("list-tabs-content-android");
-			$("#ui-tabs").contents().find(".tabs-positive").removeClass("tabs-striped tabs-top");
+			$("#ui-tabs").contents().find(".tabs-positive--transparent").removeClass("tabs-striped tabs-top");
 			$("#ui-tabs").contents().find(".tabs-content").removeClass("tabs-content-android");
 		} else if (os == "android") {
-			$("#ui-listviews").contents().find(".tabs-positive").addClass("tabs-striped tabs-top");
+			$("#ui-listviews").contents().find(".tabs-positive--transparent").addClass("tabs-striped tabs-top");
 			$("#ui-listviews").contents().find(".list-tabs-content").addClass("list-tabs-content-android");
-			$("#ui-tabs").contents().find(".tabs-positive").addClass("tabs-striped tabs-top");
+			$("#ui-tabs").contents().find(".tabs-positive--transparent").addClass("tabs-striped tabs-top");
 			$("#ui-tabs").contents().find(".tabs-content").addClass("tabs-content-android");
 		}
 
@@ -186,7 +186,7 @@ function updateCSS(id, str) {
 				// have a lot of exceptions to add contrasting text colors when necessary!
 				if (id == "global-ab") {
 					// when setting action bar, make sure text is contrasting
-					$(".device-screen").contents().find(".pane .bar.bar-positive .title").css("color", idealTextColor(str));
+					$(".device-screen").contents().find(".pane .bar.bar-positive--transparent .title").css("color", idealTextColor(str));
 				}
 				else if (id == "ios-seg-bar") {
 					// when setting segmented bar text, add contrasting ios "selected" text color
