@@ -1,98 +1,101 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <link rel="stylesheet" type="text/css" href="../styles/ionic.min.css" />
-    <link rel="stylesheet" type="text/css" href="../styles/ionic.v2.min.css" />
-    <link rel="stylesheet" type="text/css" href="../styles/ionic-hacks-widgets.css" />
-    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
-    <link rel="stylesheet" type="text/css" href="../styles/font-sf.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <script src="../scripts/ionic.bundle.min.js"></script>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="../styles/ionic.min.css" />
+	<link rel="stylesheet" type="text/css" href="../styles/ionic.v2.min.css" />
+	<link rel="stylesheet" type="text/css" href="../styles/ionic-hacks-widgets.css" />
+	<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+	<link rel="stylesheet" type="text/css" href="../styles/font-sf.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+	<script src="../scripts/ionic.bundle.min.js"></script>
 </head>
+
 <body ng-app="starter">
 
-<ion-pane>
-    <ion-header-bar class="bar-positive">
-        <h1 class="title">UI Widgets</h1>
-    </ion-header-bar>
-    <ion-content class="has-header">
+	<ion-pane>
+		<ion-header-bar class="bar-positive">
+			<h1 class="title">UI Widgets</h1>
+		</ion-header-bar>
+		<ion-content class="has-header">
 
-        <div class="item item-divider" style="margin-top:43px">
-            Segmented Bar
-        </div>
-        <ion-segment class="segment-ios ng-untouched ng-valid ng-dirty segment-margin" id="ios-seg-bar">
-            <ion-segment-button class="segment-button segment-activated segment-active-ios" role="button" tappable="" value="Paid" aria-pressed="true">
-                Item One
-                <div class="button-effect"></div>
-            </ion-segment-button>
-            <ion-segment-button class="segment-button segment-button-inactive-ios" role="button" tappable="" value="Free" aria-pressed="false">
-                Item Two
-                <div class="button-effect"></div>
-            </ion-segment-button>
-            <ion-segment-button class="segment-button segment-button-inactive-ios" role="button" tappable="" value="Top" aria-pressed="false">
-                Item Three
-                <div class="button-effect"></div>
-            </ion-segment-button>
-        </ion-segment>
+			<div class="item item-divider" style="margin-top:43px">
+				Segmented Bar
+			</div>
+			<ion-segment class="segment-ios ng-untouched ng-valid ng-dirty segment-margin" id="ios-seg-bar">
+				<ion-segment-button class="segment-button segment-activated segment-active-ios" role="button" tappable="" value="Paid" aria-pressed="true">
+					Item One
+					<div class="button-effect"></div>
+				</ion-segment-button>
+				<ion-segment-button class="segment-button segment-button-inactive-ios" role="button" tappable="" value="Free" aria-pressed="false">
+					Item Two
+					<div class="button-effect"></div>
+				</ion-segment-button>
+				<ion-segment-button class="segment-button segment-button-inactive-ios" role="button" tappable="" value="Top" aria-pressed="false">
+					Item Three
+					<div class="button-effect"></div>
+				</ion-segment-button>
+			</ion-segment>
 
-        <ion-segment class="segment-md ng-untouched ng-valid ng-dirty segment-margin" id="android-seg-bar" style="display:none">
-            <ion-segment-button class="segment-button segment-activated" role="button" tappable="" value="Paid" aria-pressed="true">
-                Item One
-                <div class="button-effect" style="transform: translate3d(-6px, -44px, 0px) scale(1); height: 143px; width: 143px; opacity: 0; transition: transform 329ms, opacity 230ms 99ms;"></div>
-            </ion-segment-button>
-            <ion-segment-button class="segment-button" role="button" tappable="" value="Free" aria-pressed="false">
-                Item Two
-                <div class="button-effect" style="transform: translate3d(-8px, -38px, 0px) scale(1); height: 132px; width: 132px; opacity: 0; transition: transform 329ms, opacity 230ms 99ms;"></div>
-            </ion-segment-button>
-            <ion-segment-button class="segment-button" role="button" tappable="" value="Top" aria-pressed="false">
-                Item Three
-                <div class="button-effect" style="transform: translate3d(-5px, -51px, 0px) scale(1); height: 159px; width: 159px; opacity: 0; transition: transform 329ms, opacity 230ms 99ms;"></div>
-            </ion-segment-button>
-        </ion-segment>
+			<ion-segment class="segment-md ng-untouched ng-valid ng-dirty segment-margin" id="android-seg-bar" style="display:none">
+				<ion-segment-button class="segment-button segment-activated" role="button" tappable="" value="Paid" aria-pressed="true">
+					Item One
+					<div class="button-effect" style="transform: translate3d(-6px, -44px, 0px) scale(1); height: 143px; width: 143px; opacity: 0; transition: transform 329ms, opacity 230ms 99ms;"></div>
+				</ion-segment-button>
+				<ion-segment-button class="segment-button" role="button" tappable="" value="Free" aria-pressed="false">
+					Item Two
+					<div class="button-effect" style="transform: translate3d(-8px, -38px, 0px) scale(1); height: 132px; width: 132px; opacity: 0; transition: transform 329ms, opacity 230ms 99ms;"></div>
+				</ion-segment-button>
+				<ion-segment-button class="segment-button" role="button" tappable="" value="Top" aria-pressed="false">
+					Item Three
+					<div class="button-effect" style="transform: translate3d(-5px, -51px, 0px) scale(1); height: 159px; width: 159px; opacity: 0; transition: transform 329ms, opacity 230ms 99ms;"></div>
+				</ion-segment-button>
+			</ion-segment>
 
-        <div class="item item-divider">
-            Switch
-        </div>
-        <ul class="list" style="margin-bottom:0px">
-            <li class="item item-toggle" id="ios-switch">
-                iOS
-                <label class="toggle toggle-large">
-                    <input type="checkbox" checked>
-                    <div class="track">
-                        <div class="handle"></div>
-                    </div>
-                </label>
-            </li>
-            <li class="item item-toggle" id="android-switch" style="display:none">
-                Android
-                <label class="toggle toggle-small">
-                    <input type="checkbox" checked>
-                    <div class="track">
-                        <div class="handle"></div>
-                    </div>
-                </label>
-            </li>
-        </ul>
+			<div class="item item-divider">
+				Switch
+			</div>
+			<ul class="list" style="margin-bottom:0px">
+				<li class="item item-toggle" id="ios-switch">
+					iOS
+					<label class="toggle toggle-large">
+						<input type="checkbox" checked>
+						<div class="track">
+							<div class="handle"></div>
+						</div>
+					</label>
+				</li>
+				<li class="item item-toggle" id="android-switch" style="display:none">
+					Android
+					<label class="toggle toggle-small">
+						<input type="checkbox" checked>
+						<div class="track">
+							<div class="handle"></div>
+						</div>
+					</label>
+				</li>
+			</ul>
 
-        <div class="item item-divider">
-            Activity Indicator
-        </div>
-        <ul class="list" style="margin-bottom:0px">
-            <li class="item item-toggle" id="ios-activity">
-                iOS
-                <label class="toggle ios-activity">
-                    <ion-spinner icon="ios"></ion-spinner>
-                </label>
-            </li>
-            <li class="item item-toggle" id="android-activity" style="display:none">
-                Android
-                <label class="toggle">
-                    <ion-spinner icon="android"></ion-spinner>
-                </label>
-            </li>
-        </ul>
+			<div class="item item-divider">
+				Activity Indicator
+			</div>
+			<ul class="list" style="margin-bottom:0px">
+				<li class="item item-toggle" id="ios-activity">
+					iOS
+					<label class="toggle ios-activity">
+						<ion-spinner icon="ios"></ion-spinner>
+					</label>
+				</li>
+				<li class="item item-toggle" id="android-activity" style="display:none">
+					Android
+					<label class="toggle">
+						<ion-spinner icon="android"></ion-spinner>
+					</label>
+				</li>
+			</ul>
 
-        <!--<div class="item item-divider">
+			<!--<div class="item item-divider">
             Search Bars
         </div>
         <div class="bar bar-header item-input-inset ui-search">
@@ -102,38 +105,38 @@
             </label>
         </div>-->
 
-        <div class="item item-divider">
-            Slider
-        </div>
-        <ion-range class="range-ios ng-untouched ng-pristine ng-valid" id="slider">
-            <ion-icon name="sunny" range-left="" role="img" small="" class="icon-md ion-md-sunny" aria-label="sunny"></ion-icon>
-            <div class="range-slider">
-                <div class="range-bar"></div>
-                <div class="range-bar range-bar-active" style="right: 50%;"></div>
-                <div class="range-knob-handle" role="slider" tabindex="0" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="left: 50%;">
-                    <div class="range-knob slider-knob"></div>
-                </div>
-            </div>
-            <ion-icon name="sunny" range-right="" role="img" class="icon-md ion-md-sunny" aria-label="sunny"></ion-icon>
-        </ion-range>
+			<div class="item item-divider">
+				Slider
+			</div>
+			<ion-range class="range-ios ng-untouched ng-pristine ng-valid" id="slider">
+				<ion-icon name="sunny" range-left="" role="img" small="" class="icon-md ion-md-sunny" aria-label="sunny"></ion-icon>
+				<div class="range-slider">
+					<div class="range-bar"></div>
+					<div class="range-bar range-bar-active" style="right: 50%;"></div>
+					<div class="range-knob-handle" role="slider" tabindex="0" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="left: 50%;">
+						<div class="range-knob slider-knob"></div>
+					</div>
+				</div>
+				<ion-icon name="sunny" range-right="" role="img" class="icon-md ion-md-sunny" aria-label="sunny"></ion-icon>
+			</ion-range>
 
-        <div class="item item-divider">
-            Progress Indicator
-        </div>
-        <div class="pace pace-active" style="padding-top:20px;padding-bottom:20px">
-            <div class="pace-progress" data-progress="50" data-progress-text="50%" 
-            style="-webkit-transform: translate3d(50%, 0px, 0px); -ms-transform: translate3d(50%, 0px, 0px); transform: translate3d(50%, 0px, 0px);">
-                <div class="pace-progress-inner"></div>
-            </div>
-            <div class="pace-activity"></div>
-        </div>
+			<div class="item item-divider">
+				Progress Indicator
+			</div>
+			<div class="pace pace-active" style="padding-top:20px;padding-bottom:20px">
+				<div class="pace-progress" data-progress="50" data-progress-text="50%" style="-webkit-transform: translate3d(50%, 0px, 0px); -ms-transform: translate3d(50%, 0px, 0px); transform: translate3d(50%, 0px, 0px);">
+					<div class="pace-progress-inner"></div>
+				</div>
+				<div class="pace-activity"></div>
+			</div>
 
-    </ion-content>
-</ion-pane>
+		</ion-content>
+	</ion-pane>
 
-<script>
-    angular.module('starter', ['ionic']);
-</script>
+	<script>
+		angular.module('starter', ['ionic']);
+	</script>
 
 </body>
+
 </html>

@@ -1,74 +1,82 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <link rel="stylesheet" type="text/css" href="../styles/ionic.min.css" />
-    <link rel="stylesheet" type="text/css" href="../styles/ionic-hacks-text.css" />
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="../styles/ionic.min.css" />
+	<link rel="stylesheet" type="text/css" href="../styles/ionic-hacks-text.css" />
 	<link rel="stylesheet" type="text/css" href="../styles/font-sf.css" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <script src="../scripts/ionic.bundle.min.js"></script>
+	<script src="../scripts/ionic.bundle.min.js"></script>
 </head>
+
 <body ng-app="starter">
 
-<ion-pane>
-    <ion-header-bar class="bar-positive">
-        <h1 class="title">Text</h1>
-    </ion-header-bar>
-    <ion-content class="has-header padding-horizontal">
+	<ion-pane>
+		<ion-header-bar class="bar-positive">
+			<h1 class="title">Text</h1>
+		</ion-header-bar>
+		<ion-content class="has-header padding-horizontal">
 
-		<div class="text-headings">
-			<h1>Heading .h1</h1>
-			<h2>Heading .h2</h2>
-			<h3>Heading .h3</h3>
-			<h4>Heading .h4</h4>
-			<h5>Heading .h5</h5>
-			<h6>Heading .h6</h6>
-		</div>
-
-		<hr />
-
-		<div class="text-sizes">
-
-			<p class="text-primary">.text-primary</p>
-			<p class="text-danger">.text-danger</p>
-			<p class="text-muted">.text-muted</p>
-			<p><span class="text-bg-primary">.bg-primary</span></p>
-			<p><span class="text-bg-danger">.bg-danger</span></p>
+			<div class="text-headings">
+				<h1>Heading .h1</h1>
+				<h2>Heading .h2</h2>
+				<h3>Heading .h3</h3>
+				<h4>Heading .h4</h4>
+				<h5>Heading .h5</h5>
+				<h6>Heading .h6</h6>
+			</div>
 
 			<hr />
 
-			<div class="text-sizes-no-color">
+			<div class="text-sizes">
 
-				<p class="text-lowercase">lowercase text .text-lowercase</p>
-				<p class="text-uppercase">UPPERCASE TEXT .text-uppercase</p>
-				<p class="text-capitalize">Capitalized Text .text-capitalize</p>
-				<p class="text-normal">Normal Text .font-weight-normal</p>
-				<p class="text-bold">Bold Text .font-weight-bold</p>
-				<p class="text-italic">Italic Text .font-italic</p>
+				<p class="text-primary">.text-primary</p>
+				<p class="text-danger">.text-danger</p>
+				<p class="text-muted">.text-muted</p>
+				<p>
+					<span class="text-bg-primary">.bg-primary</span>
+				</p>
+				<p>
+					<span class="text-bg-danger">.bg-danger</span>
+				</p>
 
 				<hr />
 
-				<div class="row">
-					<div class="col-33">
-						<p>.pull-left</p>
+				<div class="text-sizes-no-color">
+
+					<p class="text-lowercase">lowercase text .text-lowercase</p>
+					<p class="text-uppercase">UPPERCASE TEXT .text-uppercase</p>
+					<p class="text-capitalize">Capitalized Text .text-capitalize</p>
+					<p class="text-normal">Normal Text .font-weight-normal</p>
+					<p class="text-bold">Bold Text .font-weight-bold</p>
+					<p class="text-italic">Italic Text .font-italic</p>
+
+					<hr />
+
+					<div class="row">
+						<div class="col-33">
+							<p>.pull-left</p>
+						</div>
+						<div class="col-33" style="text-align:center">
+							<p>.m-x-auto</p>
+						</div>
+						<div class="col-33" style="text-align:right">
+							<p>.pull-right</p>
+						</div>
 					</div>
-					<div class="col-33" style="text-align:center">
-						<p>.m-x-auto</p>
-					</div>
-					<div class="col-33" style="text-align:right">
-						<p>.pull-right</p>
-					</div>
+
 				</div>
 
 			</div>
 
-		</div>
+		</ion-content>
+	</ion-pane>
 
-    </ion-content>
-</ion-pane>
-
-<script>
-    angular.module('starter', ['ionic']);
-</script>
+	<script>
+		angular.module('starter', ['ionic']);
+	</script>
 
 </body>
+
 </html>
