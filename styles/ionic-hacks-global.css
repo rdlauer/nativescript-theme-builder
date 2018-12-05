@@ -1,35 +1,51 @@
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-button,
-.tab-item {
-  font-family: 'San Francisco';
+body, h1, h2, h3, h4, h5, h6, button, .tab-item, div {
+	font-family: 'San Francisco';
 }
 
 .header-md::after {
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  background-image: url('../images/header-md.png');
-  background-repeat: repeat-x;
-  background-position: 0 -1px;
-  content: '';
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 100%;
+	height: 5px;
+	background-image: url('../images/header-md.png');
+	background-repeat: repeat-x;
+	background-position: 0 -1px;
+	content: '';
 }
 
 .header-md .title {
-  text-align: left;
+	text-align: left;
 }
 
 .bar .title {
-  font-size: 19px;
+	font-size: 19px;
+	padding-top: 19px;
+	overflow: visible;
+	background: url('../images/ios-notch.png') no-repeat top;
 }
 
-.bar {
-  background-image: none !important;
+.no-notch {
+	background: none !important;
+	padding-top: 0px !important;
+}
+
+/* .bar {
+	background-image: none !important;
+} */
+
+.bar-header {
+	height: 60px;
+}
+
+.header-md {
+	height: 44px;
+}
+
+.scroll-content {
+	margin-top: 15px;
+}
+
+.scroll-content-android {
+	margin-top: -1px !important;
 }

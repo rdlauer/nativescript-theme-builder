@@ -1,41 +1,56 @@
 @import url("ionic-hacks-global.css");
-
-/*.header-md .title {
-    padding-left: 40px;
-}*/
+.header-md .title {
+	padding-left: 40px;
+}
 
 .tab-title {
-    font-size: 14px;
+	font-size: 14px;
 }
 
 .tabs {
-    border-color: #b2b2b2 !important;
+	border-color: #b2b2b2 !important;
 }
 
-.item-text-center
-{
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    height: 100%;
+.item-text-center {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	height: 100%;
 }
 
 .tabs-content {
-    padding: 50px 10px 0px 10px;
+	padding: 50px 10px 0px 10px;
 }
 
 .tabs-content-android {
-    padding-top: 100px;
+	padding-top: 100px;
+}
+
+.bar .button {
+	margin-top: 20px;
+}
+
+.tabs-bar-button-android {
+	margin-top: 0px !important;
+}
+
+.no-notch-items {
+	background: none !important;
+	padding-top: 19px !important;
+}
+
+.no-notch-items-android {
+	padding-top: 0px !important;
 }
 
 /*

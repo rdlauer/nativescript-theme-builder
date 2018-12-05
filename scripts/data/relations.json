@@ -1,1209 +1,1216 @@
 [
-  {
-    "__comment": "action bar color",
-    "id": "global-ab",
-    "iframe": [
-      {
-        "id": "ui-widgets"
-      },
-      {
-        "id": "ui-buttons"
-      },
-      {
-        "id": "ui-forms"
-      },
-      {
-        "id": "ui-listviews"
-      },
-      {
-        "id": "ui-texts"
-      },
-      {
-        "id": "ui-tabs"
-      }
-    ],
-    "web": [
-      {
-        "class": ".pane .bar-positive",
-        "attr": "background-color"
-      },
-      {
-        "class": ".pane .bar-positive",
-        "attr": "border-color"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".action-bar",
-        "attr": "background-color"
-      }
-    ]
-  },
-  {
-    "__comment": "view background color",
-    "id": "global-bg",
-    "iframe": [
-      {
-        "id": "ui-widgets"
-      },
-      {
-        "id": "ui-buttons"
-      },
-      {
-        "id": "ui-forms"
-      },
-      {
-        "id": "ui-listviews"
-      },
-      {
-        "id": "ui-texts"
-      },
-      {
-        "id": "ui-tabs"
-      }
-    ],
-    "web": [
-      {
-        "class": ".pane",
-        "attr": "background-color"
-      },
-      {
-        "class": ".view",
-        "attr": "background-color"
-      },
-      {
-        "class": ".scroll .item",
-        "attr": "background-color"
-      },
-      {
-        "class": ".item-stacked-label input",
-        "attr": "background-color"
-      },
-      {
-        "class": ".menu",
-        "attr": "background-color"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".page",
-        "attr": "background-color"
-      },
-      {
-        "class": ".tab-view",
-        "attr": "tab-background-color"
-      },
-      {
-        "class": ".list-group, .list-group-item",
-        "attr": "background-color"
-      }
-    ]
-  },
-  {
-    "__comment": "text color",
-    "id": "global-text",
-    "iframe": [
-      {
-        "id": "ui-widgets"
-      },
-      {
-        "id": "ui-buttons"
-      },
-      {
-        "id": "ui-forms"
-      },
-      {
-        "id": "ui-listviews"
-      },
-      {
-        "id": "ui-texts"
-      },
-      {
-        "id": "ui-tabs"
-      }
-    ],
-    "web": [
-      {
-        "class": ".text-sizes-no-color",
-        "attr": "color"
-      },
-      {
-        "class": ".scroll .list .item",
-        "attr": "color"
-      },
-      {
-        "class": ".list .item h2, .list .item p",
-        "attr": "color"
-      },
-      {
-        "class":
-          ".text-headings h1, .text-headings h2, .text-headings h3, .text-headings h4, .text-headings h5, .text-headings h6",
-        "attr": "color"
-      },
-      {
-        "class": ".input-label",
-        "attr": "color"
-      },
-      {
-        "class": ".tabs-content, .tabs-content h2",
-        "attr": "color"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".page label, .tab-view label",
-        "attr": "color"
-      }
-    ]
-  },
-  {
-    "__comment": "ios segmented bar color (USED FOR ANDROID AS WELL NOW)",
-    "id": "ios-seg-bar",
-    "iframe": [
-      {
-        "id": "ui-widgets"
-      }
-    ],
-    "web": [
-      {
-        "class": ".segment-ios .segment-button.segment-activated",
-        "attr": "background-color"
-      },
-      {
-        "class": ".segment-ios .segment-button",
-        "attr": "border-color"
-      },
-      {
-        "class": ".segment-md .segment-button.segment-activated",
-        "attr": "border-color"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".segmented-bar",
-        "attr": "selected-background-color"
-      }
-    ]
-  },
-  {
-    "__comment": "ios segmented bar text",
-    "id": "ios-seg-bar-text",
-    "iframe": [
-      {
-        "id": "ui-widgets"
-      }
-    ],
-    "web": [
-      {
-        "class": ".segment-ios .segment-button-inactive-ios",
-        "attr": "color"
-      },
-      {
-        "class": ".segment-md .segment-button",
-        "attr": "color"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".segmented-bar",
-        "attr": "color"
-      }
-    ]
-  },
-  {
-    "__comment": "ios segmented bar background color",
-    "id": "ios-seg-bar-bg",
-    "iframe": [
-      {
-        "id": "ui-widgets"
-      }
-    ],
-    "web": [
-      {
-        "class": ".segment-button-inactive-ios",
-        "attr": "background-color"
-      },
-      {
-        "class": ".segment-md .segment-button",
-        "attr": "background-color"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".segmented-bar",
-        "attr": "background-color"
-      }
-    ]
-  },
-  {
-    "__comment": "android segmented bar color (NOT CURRENTLY USED)",
-    "id": "android-seg-bar",
-    "iframe": [
-      {
-        "id": "ui-widgets"
-      }
-    ],
-    "web": [
-      {
-        "class": ".segment-md .segment-button.segment-activated",
-        "attr": "border-color"
-      }
-    ]
-  },
-  {
-    "__comment": "android segmented bar text color (NOT CURRENTLY USED)",
-    "id": "android-seg-bar-text",
-    "iframe": [
-      {
-        "id": "ui-widgets"
-      }
-    ],
-    "web": [
-      {
-        "class": ".segment-md .segment-button",
-        "attr": "color"
-      }
-    ]
-  },
-  {
-    "__comment": "ios switch",
-    "id": "ios-switch",
-    "iframe": [
-      {
-        "id": "ui-widgets"
-      }
-    ],
-    "web": [
-      {
-        "class": ".toggle-large input:checked+.track",
-        "attr": "border-color"
-      },
-      {
-        "class": ".toggle-large input:checked+.track",
-        "attr": "background-color"
-      },
-      {
-        "class": ".toggle-small input:checked+.track",
-        "attr": "background"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".switch[checked=true]",
-        "attr": "background-color"
-      }
-    ]
-  },
-  {
-    "__comment": "android switch (NOT CURRENTLY USED)",
-    "id": "android-switch",
-    "iframe": [
-      {
-        "id": "ui-widgets"
-      }
-    ],
-    "web": [
-      {
-        "class": ".toggle-small input:checked+.track",
-        "attr": "background"
-      }
-    ]
-  },
-  {
-    "__comment": "ios activity indicator",
-    "id": "ios-activity",
-    "iframe": [
-      {
-        "id": "ui-widgets"
-      }
-    ],
-    "web": [
-      {
-        "class": ".ios-activity ion-spinner svg *",
-        "attr": "stroke"
-      },
-      {
-        "class": ".spinner-android",
-        "attr": "stroke"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".activity-indicator",
-        "attr": "color"
-      }
-    ]
-  },
-  {
-    "__comment": "android activity indicator (NOT CURRENTLY USED)",
-    "id": "android-activity",
-    "iframe": [
-      {
-        "id": "ui-widgets"
-      }
-    ],
-    "web": [
-      {
-        "class": ".spinner-android",
-        "attr": "stroke"
-      }
-    ]
-  },
-  {
-    "__comment": "search bar (NOT CURRENTLY USED DUE TO NO CSS PROPERTIES)",
-    "id": "search-bar",
-    "iframe": [
-      {
-        "id": "ui-widgets"
-      }
-    ],
-    "web": [
-      {
-        "class": ".ui-search ",
-        "attr": "background-color"
-      }
-    ]
-  },
-  {
-    "__comment": "slider",
-    "id": "slider",
-    "iframe": [
-      {
-        "id": "ui-widgets"
-      }
-    ],
-    "web": [
-      {
-        "class": ".range-bar-active",
-        "attr": "background-color"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".slider",
-        "attr": "background-color"
-      }
-    ]
-  },
-  {
-    "__comment": "progress indicator",
-    "id": "progress-indicator",
-    "iframe": [
-      {
-        "id": "ui-widgets"
-      }
-    ],
-    "web": [
-      {
-        "class": ".pace .pace-progress",
-        "attr": "background"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".progress",
-        "attr": "color"
-      }
-    ]
-  },
-  {
-    "__comment": "avatar border radius",
-    "id": "listitem-avatar-radius-px",
-    "iframe": [
-      {
-        "id": "ui-listviews"
-      }
-    ],
-    "web": [
-      {
-        "class": ".item-avatar img",
-        "attr": "border-radius"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".img-circle",
-        "attr": "border-radius"
-      }
-    ]
-  },
-  {
-    "__comment": "item heading size",
-    "id": "listitem-heading-size-px",
-    "iframe": [
-      {
-        "id": "ui-listviews"
-      }
-    ],
-    "web": [
-      {
-        "class": ".list .item h2",
-        "attr": "font-size"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".list-group-item-heading",
-        "attr": "font-size"
-      }
-    ]
-  },
-  {
-    "__comment": "item sub-heading size",
-    "id": "listitem-subheading-size-px",
-    "iframe": [
-      {
-        "id": "ui-listviews"
-      }
-    ],
-    "web": [
-      {
-        "class": ".list .item p",
-        "attr": "font-size"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".list-group-item-text",
-        "attr": "font-size"
-      }
-    ]
-  },
-  {
-    "__comment": "thumbnail border radius",
-    "id": "listitem-thumb-radius-px",
-    "iframe": [
-      {
-        "id": "ui-listviews"
-      }
-    ],
-    "web": [
-      {
-        "class": ".item-thumbnail-left img",
-        "attr": "border-radius"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".img-rounded",
-        "attr": "border-radius"
-      }
-    ]
-  },
-  {
-    "__comment": "body text size",
-    "id": "text-size-px",
-    "iframe": [
-      {
-        "id": "ui-texts"
-      },
-      {
-        "id": "ui-tabs"
-      }
-    ],
-    "web": [
-      {
-        "class": ".text-sizes p",
-        "attr": "font-size"
-      },
-      {
-        "class": ".tabs-content p",
-        "attr": "font-size"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".body",
-        "attr": "font-size"
-      }
-    ]
-  },
-  {
-    "__comment": "h1 size",
-    "id": "text-h1-size-px",
-    "iframe": [
-      {
-        "id": "ui-texts"
-      }
-    ],
-    "web": [
-      {
-        "class": ".text-headings h1",
-        "attr": "font-size"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".h1",
-        "attr": "font-size"
-      }
-    ]
-  },
-  {
-    "__comment": "h2 size",
-    "id": "text-h2-size-px",
-    "iframe": [
-      {
-        "id": "ui-texts"
-      },
-      {
-        "id": "ui-tabs"
-      }
-    ],
-    "web": [
-      {
-        "class": ".text-headings h2",
-        "attr": "font-size"
-      },
-      {
-        "class": ".tabs-content h2",
-        "attr": "font-size"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".h2",
-        "attr": "font-size"
-      }
-    ]
-  },
-  {
-    "__comment": "h3 size",
-    "id": "text-h3-size-px",
-    "iframe": [
-      {
-        "id": "ui-texts"
-      }
-    ],
-    "web": [
-      {
-        "class": ".text-headings h3",
-        "attr": "font-size"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".h3",
-        "attr": "font-size"
-      }
-    ]
-  },
-  {
-    "__comment": "h4 size",
-    "id": "text-h4-size-px",
-    "iframe": [
-      {
-        "id": "ui-texts"
-      }
-    ],
-    "web": [
-      {
-        "class": ".text-headings h4",
-        "attr": "font-size"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".h4",
-        "attr": "font-size"
-      }
-    ]
-  },
-  {
-    "__comment": "h5 size",
-    "id": "text-h5-size-px",
-    "iframe": [
-      {
-        "id": "ui-texts"
-      }
-    ],
-    "web": [
-      {
-        "class": ".text-headings h5",
-        "attr": "font-size"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".h5",
-        "attr": "font-size"
-      }
-    ]
-  },
-  {
-    "__comment": "h6 size",
-    "id": "text-h6-size-px",
-    "iframe": [
-      {
-        "id": "ui-texts"
-      }
-    ],
-    "web": [
-      {
-        "class": ".text-headings h6",
-        "attr": "font-size"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".h6",
-        "attr": "font-size"
-      }
-    ]
-  },
-  {
-    "__comment": "primary color",
-    "id": "text-primary-color",
-    "iframe": [
-      {
-        "id": "ui-texts"
-      }
-    ],
-    "web": [
-      {
-        "class": ".text-primary",
-        "attr": "color"
-      },
-      {
-        "class": ".text-bg-primary",
-        "attr": "background-color"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".page label.text-primary, .tab-view label.text-primary",
-        "attr": "color"
-      },
-      {
-        "class": ".page label.bg-primary, .tab-view label.bg-primary",
-        "attr": "background-color"
-      }
-    ]
-  },
-  {
-    "__comment": "danger color",
-    "id": "text-danger-color",
-    "iframe": [
-      {
-        "id": "ui-texts"
-      }
-    ],
-    "web": [
-      {
-        "class": ".text-danger",
-        "attr": "color"
-      },
-      {
-        "class": ".text-bg-danger",
-        "attr": "background-color"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".page label.text-danger, .tab-view label.text-danger",
-        "attr": "color"
-      },
-      {
-        "class": ".page label.bg-danger, .tab-view label.bg-danger",
-        "attr": "background-color"
-      }
-    ]
-  },
-  {
-    "__comment": "muted color",
-    "id": "text-muted-color",
-    "iframe": [
-      {
-        "id": "ui-texts"
-      }
-    ],
-    "web": [
-      {
-        "class": ".text-muted",
-        "attr": "color"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".page label.text-muted, .tab-view label.text-muted",
-        "attr": "color"
-      }
-    ]
-  },
-  {
-    "__comment": "plain button text color",
-    "id": "buttons-plain-color",
-    "iframe": [
-      {
-        "id": "ui-buttons"
-      }
-    ],
-    "web": [
-      {
-        "class": ".button.button-positive.button-clear",
-        "attr": "color"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".btn",
-        "attr": "color"
-      }
-    ]
-  },
-  {
-    "__comment": "primary button background color",
-    "id": "buttons-primary-bg-color",
-    "iframe": [
-      {
-        "id": "ui-buttons"
-      }
-    ],
-    "web": [
-      {
-        "class": ".btn-primary",
-        "attr": "background-color"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".btn-primary",
-        "attr": "background-color"
-      },
-      {
-        "class": ".btn-primary",
-        "attr": "border-color"
-      }
-    ]
-  },
-  {
-    "__comment": "primary button text color",
-    "id": "buttons-primary-lbl-color",
-    "iframe": [
-      {
-        "id": "ui-buttons"
-      }
-    ],
-    "web": [
-      {
-        "class": ".btn-primary",
-        "attr": "color"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".btn-primary",
-        "attr": "color"
-      }
-    ]
-  },
-  {
-    "__comment": "outlined button border color",
-    "id": "buttons-outline-bg-color",
-    "iframe": [
-      {
-        "id": "ui-buttons"
-      }
-    ],
-    "web": [
-      {
-        "class": ".button-outline",
-        "attr": "border-color"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".btn-outline",
-        "attr": "border-color"
-      }
-    ]
-  },
-  {
-    "__comment": "outlined button text color",
-    "id": "buttons-outline-color",
-    "iframe": [
-      {
-        "id": "ui-buttons"
-      }
-    ],
-    "web": [
-      {
-        "class": ".button-outline",
-        "attr": "color"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".btn-outline",
-        "attr": "color"
-      }
-    ]
-  },
-  {
-    "__comment": "disabled button background color",
-    "id": "buttons-disabled-bg-color",
-    "iframe": [
-      {
-        "id": "ui-buttons"
-      }
-    ],
-    "web": [
-      {
-        "class": ".button-disabled",
-        "attr": "background-color"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".btn[isEnabled=false]",
-        "attr": "background-color"
-      },
-      {
-        "class": ".btn[isEnabled=false]",
-        "attr": "border-color"
-      }
-    ]
-  },
-  {
-    "__comment": "disabled button text color",
-    "id": "buttons-disabled-lbl-color",
-    "iframe": [
-      {
-        "id": "ui-buttons"
-      }
-    ],
-    "web": [
-      {
-        "class": ".button-disabled",
-        "attr": "color"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".btn[isEnabled=false]",
-        "attr": "color"
-      }
-    ]
-  },
-  {
-    "__comment": "small rounded button radius",
-    "id": "buttons-rounded-sm-px",
-    "iframe": [
-      {
-        "id": "ui-buttons"
-      }
-    ],
-    "web": [
-      {
-        "class": ".button-sm-radius",
-        "attr": "border-radius"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".btn-rounded-sm",
-        "attr": "border-radius"
-      }
-    ]
-  },
-  {
-    "__comment": "large rounded button radius",
-    "id": "buttons-rounded-lg-px",
-    "iframe": [
-      {
-        "id": "ui-buttons"
-      }
-    ],
-    "web": [
-      {
-        "class": ".button-lg-radius",
-        "attr": "border-radius"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".btn-rounded-lg",
-        "attr": "border-radius"
-      }
-    ]
-  },
-  {
-    "__comment": "label text size",
-    "id": "form-label-text-px",
-    "iframe": [
-      {
-        "id": "ui-forms"
-      }
-    ],
-    "web": [
-      {
-        "class": ".input-label",
-        "attr": "font-size"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".label",
-        "attr": "font-size"
-      }
-    ]
-  },
-  {
-    "__comment": "placeholder/input text size",
-    "id": "form-placeholder-text-px",
-    "iframe": [
-      {
-        "id": "ui-forms"
-      }
-    ],
-    "web": [
-      {
-        "class": "input[type=text]",
-        "attr": "font-size"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".input",
-        "attr": "font-size"
-      }
-    ]
-  },
-  {
-    "__comment": "rounded input radius",
-    "id": "form-input-radius-px",
-    "iframe": [
-      {
-        "id": "ui-forms"
-      }
-    ],
-    "web": [
-      {
-        "class": ".form-input-rounded",
-        "attr": "border-radius"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".input-rounded",
-        "attr": "border-radius"
-      }
-    ]
-  },
-  {
-    "__comment": "tab label text size (NOT CURRENTLY USE DUE TO CSS ISSUES)",
-    "id": "tab-label-text-px",
-    "iframe": [
-      {
-        "id": "ui-tabs"
-      },
-      {
-        "id": "ui-listviews"
-      }
-    ],
-    "web": [
-      {
-        "class": ".tab-item",
-        "attr": "font-size"
-      }
-    ]
-  },
-  {
-    "__comment": "tab label text color",
-    "id": "tab-label-text-color",
-    "iframe": [
-      {
-        "id": "ui-tabs"
-      },
-      {
-        "id": "ui-listviews"
-      }
-    ],
-    "web": [
-      {
-        "class": ".tab-item",
-        "attr": "color"
-      },
-      {
-        "class": ".tab-title",
-        "attr": "color"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".tab-view",
-        "attr": "selected-tab-text-color"
-      },
-      {
-        "class": ".tab-view",
-        "attr": "tab-text-color"
-      }
-    ]
-  },
-  {
-    "__comment": "tab bar color",
-    "id": "tab-bar-color",
-    "iframe": [
-      {
-        "id": "ui-tabs"
-      },
-      {
-        "id": "ui-listviews"
-      }
-    ],
-    "web": [
-      {
-        "class": ".tabs",
-        "attr": "background-color"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".tab-view",
-        "attr": "tab-background-color"
-      }
-    ]
-  },
-  {
-    "__comment": "tab border color (android)",
-    "id": "tab-android-highlight-color-ab",
-    "iframe": [
-      {
-        "id": "ui-tabs"
-      },
-      {
-        "id": "ui-listviews"
-      }
-    ],
-    "web": [
-      {
-        "class": ".tab-item.tab-item-active",
-        "attr": "border-color"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".tab-view",
-        "attr": "android-selected-tab-highlight-color"
-      }
-    ]
-  },
-  {
-    "__comment": "drawer header background color",
-    "id": "drawer-header-ab",
-    "iframe": [
-      {
-        "id": "ui-tabs"
-      }
-    ],
-    "web": [
-      {
-        "class": ".menu .bar-positive",
-        "attr": "background-color"
-      },
-      {
-        "class": ".menu .bar-positive",
-        "attr": "border-color"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".sidedrawer-header",
-        "attr": "background-color"
-      }
-    ]
-  },
-  {
-    "__comment": "drawer header text color",
-    "id": "drawer-header-text-color",
-    "iframe": [
-      {
-        "id": "ui-tabs"
-      }
-    ],
-    "web": [
-      {
-        "class": ".menu .title",
-        "attr": "color"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".sidedrawer-header-brand",
-        "attr": "color"
-      }
-    ]
-  },
-  {
-    "__comment": "drawer item background color",
-    "id": "drawer-item-bg",
-    "iframe": [
-      {
-        "id": "ui-tabs"
-      }
-    ],
-    "web": [
-      {
-        "class": ".menu-wrapper .list .item",
-        "attr": "background-color"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".sidedrawer-content",
-        "attr": "background-color"
-      }
-    ]
-  },
-  {
-    "__comment": "drawer item text color",
-    "id": "drawer-item-text-color",
-    "iframe": [
-      {
-        "id": "ui-tabs"
-      }
-    ],
-    "web": [
-      {
-        "class": ".menu-wrapper .list .item",
-        "attr": "color"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".sidedrawer-list-item",
-        "attr": "color"
-      }
-    ]
-  },
-  {
-    "__comment": "selected drawer item bg color (NO WEB EQUIVALENT)",
-    "id": "drawer-item-sel-bg",
-    "iframe": [
-      {
-        "id": "ui-tabs"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".sidedrawer-list-item.active",
-        "attr": "background-color"
-      }
-    ]
-  },
-  {
-    "__comment": "selected drawer item text color (NO WEB EQUIVALENT)",
-    "id": "drawer-item-sel-text-color",
-    "iframe": [
-      {
-        "id": "ui-tabs"
-      }
-    ],
-    "tns": [
-      {
-        "class": ".sidedrawer-list-item.active",
-        "attr": "color"
-      }
-    ]
-  }
+	{
+		"__comment": "action bar color",
+		"id": "global-ab",
+		"iframe": [
+			{
+				"id": "ui-widgets"
+			},
+			{
+				"id": "ui-buttons"
+			},
+			{
+				"id": "ui-forms"
+			},
+			{
+				"id": "ui-listviews"
+			},
+			{
+				"id": "ui-texts"
+			},
+			{
+				"id": "ui-tabs"
+			}
+		],
+		"web": [
+			{
+				"class": ".pane .bar-positive",
+				"attr": "background-color"
+			},
+			{
+				"class": ".pane .bar-positive",
+				"attr": "border-color"
+			},
+			{
+				"class": ".side-drawer",
+				"attr": "background-color"
+			},
+			{
+				"class": ".side-drawer",
+				"attr": "border-color"
+			}
+		],
+		"tns": [
+			{
+				"class": ".action-bar",
+				"attr": "background-color"
+			}
+		]
+	},
+	{
+		"__comment": "view background color",
+		"id": "global-bg",
+		"iframe": [
+			{
+				"id": "ui-widgets"
+			},
+			{
+				"id": "ui-buttons"
+			},
+			{
+				"id": "ui-forms"
+			},
+			{
+				"id": "ui-listviews"
+			},
+			{
+				"id": "ui-texts"
+			},
+			{
+				"id": "ui-tabs"
+			}
+		],
+		"web": [
+			{
+				"class": ".pane",
+				"attr": "background-color"
+			},
+			{
+				"class": ".view",
+				"attr": "background-color"
+			},
+			{
+				"class": ".scroll .item",
+				"attr": "background-color"
+			},
+			{
+				"class": ".item-stacked-label input",
+				"attr": "background-color"
+			},
+			{
+				"class": ".menu",
+				"attr": "background-color"
+			}
+		],
+		"tns": [
+			{
+				"class": ".page",
+				"attr": "background-color"
+			},
+			{
+				"class": ".tab-view",
+				"attr": "tab-background-color"
+			},
+			{
+				"class": ".list-group, .list-group-item",
+				"attr": "background-color"
+			}
+		]
+	},
+	{
+		"__comment": "text color",
+		"id": "global-text",
+		"iframe": [
+			{
+				"id": "ui-widgets"
+			},
+			{
+				"id": "ui-buttons"
+			},
+			{
+				"id": "ui-forms"
+			},
+			{
+				"id": "ui-listviews"
+			},
+			{
+				"id": "ui-texts"
+			},
+			{
+				"id": "ui-tabs"
+			}
+		],
+		"web": [
+			{
+				"class": ".text-sizes-no-color",
+				"attr": "color"
+			},
+			{
+				"class": ".scroll .list .item",
+				"attr": "color"
+			},
+			{
+				"class": ".list .item h2, .list .item p",
+				"attr": "color"
+			},
+			{
+				"class": ".text-headings h1, .text-headings h2, .text-headings h3, .text-headings h4, .text-headings h5, .text-headings h6",
+				"attr": "color"
+			},
+			{
+				"class": ".input-label",
+				"attr": "color"
+			},
+			{
+				"class": ".tabs-content, .tabs-content h2",
+				"attr": "color"
+			}
+		],
+		"tns": [
+			{
+				"class": ".page label, .tab-view label",
+				"attr": "color"
+			}
+		]
+	},
+	{
+		"__comment": "ios segmented bar color (USED FOR ANDROID AS WELL NOW)",
+		"id": "ios-seg-bar",
+		"iframe": [
+			{
+				"id": "ui-widgets"
+			}
+		],
+		"web": [
+			{
+				"class": ".segment-ios .segment-button.segment-activated",
+				"attr": "background-color"
+			},
+			{
+				"class": ".segment-ios .segment-button",
+				"attr": "border-color"
+			},
+			{
+				"class": ".segment-md .segment-button.segment-activated",
+				"attr": "border-color"
+			}
+		],
+		"tns": [
+			{
+				"class": ".segmented-bar",
+				"attr": "selected-background-color"
+			}
+		]
+	},
+	{
+		"__comment": "ios segmented bar text",
+		"id": "ios-seg-bar-text",
+		"iframe": [
+			{
+				"id": "ui-widgets"
+			}
+		],
+		"web": [
+			{
+				"class": ".segment-ios .segment-button-inactive-ios",
+				"attr": "color"
+			},
+			{
+				"class": ".segment-md .segment-button",
+				"attr": "color"
+			}
+		],
+		"tns": [
+			{
+				"class": ".segmented-bar",
+				"attr": "color"
+			}
+		]
+	},
+	{
+		"__comment": "ios segmented bar background color",
+		"id": "ios-seg-bar-bg",
+		"iframe": [
+			{
+				"id": "ui-widgets"
+			}
+		],
+		"web": [
+			{
+				"class": ".segment-button-inactive-ios",
+				"attr": "background-color"
+			},
+			{
+				"class": ".segment-md .segment-button",
+				"attr": "background-color"
+			}
+		],
+		"tns": [
+			{
+				"class": ".segmented-bar",
+				"attr": "background-color"
+			}
+		]
+	},
+	{
+		"__comment": "android segmented bar color (NOT CURRENTLY USED)",
+		"id": "android-seg-bar",
+		"iframe": [
+			{
+				"id": "ui-widgets"
+			}
+		],
+		"web": [
+			{
+				"class": ".segment-md .segment-button.segment-activated",
+				"attr": "border-color"
+			}
+		]
+	},
+	{
+		"__comment": "android segmented bar text color (NOT CURRENTLY USED)",
+		"id": "android-seg-bar-text",
+		"iframe": [
+			{
+				"id": "ui-widgets"
+			}
+		],
+		"web": [
+			{
+				"class": ".segment-md .segment-button",
+				"attr": "color"
+			}
+		]
+	},
+	{
+		"__comment": "ios switch",
+		"id": "ios-switch",
+		"iframe": [
+			{
+				"id": "ui-widgets"
+			}
+		],
+		"web": [
+			{
+				"class": ".toggle-large input:checked+.track",
+				"attr": "border-color"
+			},
+			{
+				"class": ".toggle-large input:checked+.track",
+				"attr": "background-color"
+			},
+			{
+				"class": ".toggle-small input:checked+.track",
+				"attr": "background"
+			}
+		],
+		"tns": [
+			{
+				"class": ".switch[checked=true]",
+				"attr": "background-color"
+			}
+		]
+	},
+	{
+		"__comment": "android switch (NOT CURRENTLY USED)",
+		"id": "android-switch",
+		"iframe": [
+			{
+				"id": "ui-widgets"
+			}
+		],
+		"web": [
+			{
+				"class": ".toggle-small input:checked+.track",
+				"attr": "background"
+			}
+		]
+	},
+	{
+		"__comment": "ios activity indicator",
+		"id": "ios-activity",
+		"iframe": [
+			{
+				"id": "ui-widgets"
+			}
+		],
+		"web": [
+			{
+				"class": ".ios-activity ion-spinner svg *",
+				"attr": "stroke"
+			},
+			{
+				"class": ".spinner-android",
+				"attr": "stroke"
+			}
+		],
+		"tns": [
+			{
+				"class": ".activity-indicator",
+				"attr": "color"
+			}
+		]
+	},
+	{
+		"__comment": "android activity indicator (NOT CURRENTLY USED)",
+		"id": "android-activity",
+		"iframe": [
+			{
+				"id": "ui-widgets"
+			}
+		],
+		"web": [
+			{
+				"class": ".spinner-android",
+				"attr": "stroke"
+			}
+		]
+	},
+	{
+		"__comment": "search bar (NOT CURRENTLY USED DUE TO NO CSS PROPERTIES)",
+		"id": "search-bar",
+		"iframe": [
+			{
+				"id": "ui-widgets"
+			}
+		],
+		"web": [
+			{
+				"class": ".ui-search ",
+				"attr": "background-color"
+			}
+		]
+	},
+	{
+		"__comment": "slider",
+		"id": "slider",
+		"iframe": [
+			{
+				"id": "ui-widgets"
+			}
+		],
+		"web": [
+			{
+				"class": ".range-bar-active",
+				"attr": "background-color"
+			}
+		],
+		"tns": [
+			{
+				"class": ".slider",
+				"attr": "background-color"
+			}
+		]
+	},
+	{
+		"__comment": "progress indicator",
+		"id": "progress-indicator",
+		"iframe": [
+			{
+				"id": "ui-widgets"
+			}
+		],
+		"web": [
+			{
+				"class": ".pace .pace-progress",
+				"attr": "background"
+			}
+		],
+		"tns": [
+			{
+				"class": ".progress",
+				"attr": "color"
+			}
+		]
+	},
+	{
+		"__comment": "avatar border radius",
+		"id": "listitem-avatar-radius-px",
+		"iframe": [
+			{
+				"id": "ui-listviews"
+			}
+		],
+		"web": [
+			{
+				"class": ".item-avatar img",
+				"attr": "border-radius"
+			}
+		],
+		"tns": [
+			{
+				"class": ".img-circle",
+				"attr": "border-radius"
+			}
+		]
+	},
+	{
+		"__comment": "item heading size",
+		"id": "listitem-heading-size-px",
+		"iframe": [
+			{
+				"id": "ui-listviews"
+			}
+		],
+		"web": [
+			{
+				"class": ".list .item h2",
+				"attr": "font-size"
+			}
+		],
+		"tns": [
+			{
+				"class": ".list-group-item-heading",
+				"attr": "font-size"
+			}
+		]
+	},
+	{
+		"__comment": "item sub-heading size",
+		"id": "listitem-subheading-size-px",
+		"iframe": [
+			{
+				"id": "ui-listviews"
+			}
+		],
+		"web": [
+			{
+				"class": ".list .item p",
+				"attr": "font-size"
+			}
+		],
+		"tns": [
+			{
+				"class": ".list-group-item-text",
+				"attr": "font-size"
+			}
+		]
+	},
+	{
+		"__comment": "thumbnail border radius",
+		"id": "listitem-thumb-radius-px",
+		"iframe": [
+			{
+				"id": "ui-listviews"
+			}
+		],
+		"web": [
+			{
+				"class": ".item-thumbnail-left img",
+				"attr": "border-radius"
+			}
+		],
+		"tns": [
+			{
+				"class": ".img-rounded",
+				"attr": "border-radius"
+			}
+		]
+	},
+	{
+		"__comment": "body text size",
+		"id": "text-size-px",
+		"iframe": [
+			{
+				"id": "ui-texts"
+			},
+			{
+				"id": "ui-tabs"
+			}
+		],
+		"web": [
+			{
+				"class": ".text-sizes p",
+				"attr": "font-size"
+			},
+			{
+				"class": ".tabs-content p",
+				"attr": "font-size"
+			}
+		],
+		"tns": [
+			{
+				"class": ".body",
+				"attr": "font-size"
+			}
+		]
+	},
+	{
+		"__comment": "h1 size",
+		"id": "text-h1-size-px",
+		"iframe": [
+			{
+				"id": "ui-texts"
+			}
+		],
+		"web": [
+			{
+				"class": ".text-headings h1",
+				"attr": "font-size"
+			}
+		],
+		"tns": [
+			{
+				"class": ".h1",
+				"attr": "font-size"
+			}
+		]
+	},
+	{
+		"__comment": "h2 size",
+		"id": "text-h2-size-px",
+		"iframe": [
+			{
+				"id": "ui-texts"
+			},
+			{
+				"id": "ui-tabs"
+			}
+		],
+		"web": [
+			{
+				"class": ".text-headings h2",
+				"attr": "font-size"
+			},
+			{
+				"class": ".tabs-content h2",
+				"attr": "font-size"
+			}
+		],
+		"tns": [
+			{
+				"class": ".h2",
+				"attr": "font-size"
+			}
+		]
+	},
+	{
+		"__comment": "h3 size",
+		"id": "text-h3-size-px",
+		"iframe": [
+			{
+				"id": "ui-texts"
+			}
+		],
+		"web": [
+			{
+				"class": ".text-headings h3",
+				"attr": "font-size"
+			}
+		],
+		"tns": [
+			{
+				"class": ".h3",
+				"attr": "font-size"
+			}
+		]
+	},
+	{
+		"__comment": "h4 size",
+		"id": "text-h4-size-px",
+		"iframe": [
+			{
+				"id": "ui-texts"
+			}
+		],
+		"web": [
+			{
+				"class": ".text-headings h4",
+				"attr": "font-size"
+			}
+		],
+		"tns": [
+			{
+				"class": ".h4",
+				"attr": "font-size"
+			}
+		]
+	},
+	{
+		"__comment": "h5 size",
+		"id": "text-h5-size-px",
+		"iframe": [
+			{
+				"id": "ui-texts"
+			}
+		],
+		"web": [
+			{
+				"class": ".text-headings h5",
+				"attr": "font-size"
+			}
+		],
+		"tns": [
+			{
+				"class": ".h5",
+				"attr": "font-size"
+			}
+		]
+	},
+	{
+		"__comment": "h6 size",
+		"id": "text-h6-size-px",
+		"iframe": [
+			{
+				"id": "ui-texts"
+			}
+		],
+		"web": [
+			{
+				"class": ".text-headings h6",
+				"attr": "font-size"
+			}
+		],
+		"tns": [
+			{
+				"class": ".h6",
+				"attr": "font-size"
+			}
+		]
+	},
+	{
+		"__comment": "primary color",
+		"id": "text-primary-color",
+		"iframe": [
+			{
+				"id": "ui-texts"
+			}
+		],
+		"web": [
+			{
+				"class": ".text-primary",
+				"attr": "color"
+			},
+			{
+				"class": ".text-bg-primary",
+				"attr": "background-color"
+			}
+		],
+		"tns": [
+			{
+				"class": ".page label.text-primary, .tab-view label.text-primary",
+				"attr": "color"
+			},
+			{
+				"class": ".page label.bg-primary, .tab-view label.bg-primary",
+				"attr": "background-color"
+			}
+		]
+	},
+	{
+		"__comment": "danger color",
+		"id": "text-danger-color",
+		"iframe": [
+			{
+				"id": "ui-texts"
+			}
+		],
+		"web": [
+			{
+				"class": ".text-danger",
+				"attr": "color"
+			},
+			{
+				"class": ".text-bg-danger",
+				"attr": "background-color"
+			}
+		],
+		"tns": [
+			{
+				"class": ".page label.text-danger, .tab-view label.text-danger",
+				"attr": "color"
+			},
+			{
+				"class": ".page label.bg-danger, .tab-view label.bg-danger",
+				"attr": "background-color"
+			}
+		]
+	},
+	{
+		"__comment": "muted color",
+		"id": "text-muted-color",
+		"iframe": [
+			{
+				"id": "ui-texts"
+			}
+		],
+		"web": [
+			{
+				"class": ".text-muted",
+				"attr": "color"
+			}
+		],
+		"tns": [
+			{
+				"class": ".page label.text-muted, .tab-view label.text-muted",
+				"attr": "color"
+			}
+		]
+	},
+	{
+		"__comment": "plain button text color",
+		"id": "buttons-plain-color",
+		"iframe": [
+			{
+				"id": "ui-buttons"
+			}
+		],
+		"web": [
+			{
+				"class": ".button.button-positive.button-clear",
+				"attr": "color"
+			}
+		],
+		"tns": [
+			{
+				"class": ".btn",
+				"attr": "color"
+			}
+		]
+	},
+	{
+		"__comment": "primary button background color",
+		"id": "buttons-primary-bg-color",
+		"iframe": [
+			{
+				"id": "ui-buttons"
+			}
+		],
+		"web": [
+			{
+				"class": ".btn-primary",
+				"attr": "background-color"
+			}
+		],
+		"tns": [
+			{
+				"class": ".btn-primary",
+				"attr": "background-color"
+			},
+			{
+				"class": ".btn-primary",
+				"attr": "border-color"
+			}
+		]
+	},
+	{
+		"__comment": "primary button text color",
+		"id": "buttons-primary-lbl-color",
+		"iframe": [
+			{
+				"id": "ui-buttons"
+			}
+		],
+		"web": [
+			{
+				"class": ".btn-primary",
+				"attr": "color"
+			}
+		],
+		"tns": [
+			{
+				"class": ".btn-primary",
+				"attr": "color"
+			}
+		]
+	},
+	{
+		"__comment": "outlined button border color",
+		"id": "buttons-outline-bg-color",
+		"iframe": [
+			{
+				"id": "ui-buttons"
+			}
+		],
+		"web": [
+			{
+				"class": ".button-outline",
+				"attr": "border-color"
+			}
+		],
+		"tns": [
+			{
+				"class": ".btn-outline",
+				"attr": "border-color"
+			}
+		]
+	},
+	{
+		"__comment": "outlined button text color",
+		"id": "buttons-outline-color",
+		"iframe": [
+			{
+				"id": "ui-buttons"
+			}
+		],
+		"web": [
+			{
+				"class": ".button-outline",
+				"attr": "color"
+			}
+		],
+		"tns": [
+			{
+				"class": ".btn-outline",
+				"attr": "color"
+			}
+		]
+	},
+	{
+		"__comment": "disabled button background color",
+		"id": "buttons-disabled-bg-color",
+		"iframe": [
+			{
+				"id": "ui-buttons"
+			}
+		],
+		"web": [
+			{
+				"class": ".button-disabled",
+				"attr": "background-color"
+			}
+		],
+		"tns": [
+			{
+				"class": ".btn[isEnabled=false]",
+				"attr": "background-color"
+			},
+			{
+				"class": ".btn[isEnabled=false]",
+				"attr": "border-color"
+			}
+		]
+	},
+	{
+		"__comment": "disabled button text color",
+		"id": "buttons-disabled-lbl-color",
+		"iframe": [
+			{
+				"id": "ui-buttons"
+			}
+		],
+		"web": [
+			{
+				"class": ".button-disabled",
+				"attr": "color"
+			}
+		],
+		"tns": [
+			{
+				"class": ".btn[isEnabled=false]",
+				"attr": "color"
+			}
+		]
+	},
+	{
+		"__comment": "small rounded button radius",
+		"id": "buttons-rounded-sm-px",
+		"iframe": [
+			{
+				"id": "ui-buttons"
+			}
+		],
+		"web": [
+			{
+				"class": ".button-sm-radius",
+				"attr": "border-radius"
+			}
+		],
+		"tns": [
+			{
+				"class": ".btn-rounded-sm",
+				"attr": "border-radius"
+			}
+		]
+	},
+	{
+		"__comment": "large rounded button radius",
+		"id": "buttons-rounded-lg-px",
+		"iframe": [
+			{
+				"id": "ui-buttons"
+			}
+		],
+		"web": [
+			{
+				"class": ".button-lg-radius",
+				"attr": "border-radius"
+			}
+		],
+		"tns": [
+			{
+				"class": ".btn-rounded-lg",
+				"attr": "border-radius"
+			}
+		]
+	},
+	{
+		"__comment": "label text size",
+		"id": "form-label-text-px",
+		"iframe": [
+			{
+				"id": "ui-forms"
+			}
+		],
+		"web": [
+			{
+				"class": ".input-label",
+				"attr": "font-size"
+			}
+		],
+		"tns": [
+			{
+				"class": ".label",
+				"attr": "font-size"
+			}
+		]
+	},
+	{
+		"__comment": "placeholder/input text size",
+		"id": "form-placeholder-text-px",
+		"iframe": [
+			{
+				"id": "ui-forms"
+			}
+		],
+		"web": [
+			{
+				"class": "input[type=text]",
+				"attr": "font-size"
+			}
+		],
+		"tns": [
+			{
+				"class": ".input",
+				"attr": "font-size"
+			}
+		]
+	},
+	{
+		"__comment": "rounded input radius",
+		"id": "form-input-radius-px",
+		"iframe": [
+			{
+				"id": "ui-forms"
+			}
+		],
+		"web": [
+			{
+				"class": ".form-input-rounded",
+				"attr": "border-radius"
+			}
+		],
+		"tns": [
+			{
+				"class": ".input-rounded",
+				"attr": "border-radius"
+			}
+		]
+	},
+	{
+		"__comment": "tab label text size (NOT CURRENTLY USE DUE TO CSS ISSUES)",
+		"id": "tab-label-text-px",
+		"iframe": [
+			{
+				"id": "ui-tabs"
+			},
+			{
+				"id": "ui-listviews"
+			}
+		],
+		"web": [
+			{
+				"class": ".tab-item",
+				"attr": "font-size"
+			}
+		]
+	},
+	{
+		"__comment": "tab label text color",
+		"id": "tab-label-text-color",
+		"iframe": [
+			{
+				"id": "ui-tabs"
+			},
+			{
+				"id": "ui-listviews"
+			}
+		],
+		"web": [
+			{
+				"class": ".tab-item",
+				"attr": "color"
+			},
+			{
+				"class": ".tab-title",
+				"attr": "color"
+			}
+		],
+		"tns": [
+			{
+				"class": ".tab-view",
+				"attr": "selected-tab-text-color"
+			},
+			{
+				"class": ".tab-view",
+				"attr": "tab-text-color"
+			}
+		]
+	},
+	{
+		"__comment": "tab bar color",
+		"id": "tab-bar-color",
+		"iframe": [
+			{
+				"id": "ui-tabs"
+			},
+			{
+				"id": "ui-listviews"
+			}
+		],
+		"web": [
+			{
+				"class": ".tabs",
+				"attr": "background-color"
+			}
+		],
+		"tns": [
+			{
+				"class": ".tab-view",
+				"attr": "tab-background-color"
+			}
+		]
+	},
+	{
+		"__comment": "tab border color (android)",
+		"id": "tab-android-highlight-color-ab",
+		"iframe": [
+			{
+				"id": "ui-tabs"
+			},
+			{
+				"id": "ui-listviews"
+			}
+		],
+		"web": [
+			{
+				"class": ".tab-item.tab-item-active",
+				"attr": "border-color"
+			}
+		],
+		"tns": [
+			{
+				"class": ".tab-view",
+				"attr": "android-selected-tab-highlight-color"
+			}
+		]
+	},
+	{
+		"__comment": "drawer header background color",
+		"id": "drawer-header-ab",
+		"iframe": [
+			{
+				"id": "ui-tabs"
+			}
+		],
+		"web": [
+			{
+				"class": ".menu .bar-positive",
+				"attr": "background-color"
+			},
+			{
+				"class": ".menu .bar-positive",
+				"attr": "border-color"
+			}
+		],
+		"tns": [
+			{
+				"class": ".sidedrawer-header",
+				"attr": "background-color"
+			}
+		]
+	},
+	{
+		"__comment": "drawer header text color",
+		"id": "drawer-header-text-color",
+		"iframe": [
+			{
+				"id": "ui-tabs"
+			}
+		],
+		"web": [
+			{
+				"class": ".menu .title",
+				"attr": "color"
+			}
+		],
+		"tns": [
+			{
+				"class": ".sidedrawer-header-brand",
+				"attr": "color"
+			}
+		]
+	},
+	{
+		"__comment": "drawer item background color",
+		"id": "drawer-item-bg",
+		"iframe": [
+			{
+				"id": "ui-tabs"
+			}
+		],
+		"web": [
+			{
+				"class": ".menu-wrapper .list .item",
+				"attr": "background-color"
+			}
+		],
+		"tns": [
+			{
+				"class": ".sidedrawer-content",
+				"attr": "background-color"
+			}
+		]
+	},
+	{
+		"__comment": "drawer item text color",
+		"id": "drawer-item-text-color",
+		"iframe": [
+			{
+				"id": "ui-tabs"
+			}
+		],
+		"web": [
+			{
+				"class": ".menu-wrapper .list .item",
+				"attr": "color"
+			}
+		],
+		"tns": [
+			{
+				"class": ".sidedrawer-list-item",
+				"attr": "color"
+			}
+		]
+	},
+	{
+		"__comment": "selected drawer item bg color (NO WEB EQUIVALENT)",
+		"id": "drawer-item-sel-bg",
+		"iframe": [
+			{
+				"id": "ui-tabs"
+			}
+		],
+		"tns": [
+			{
+				"class": ".sidedrawer-list-item.active",
+				"attr": "background-color"
+			}
+		]
+	},
+	{
+		"__comment": "selected drawer item text color (NO WEB EQUIVALENT)",
+		"id": "drawer-item-sel-text-color",
+		"iframe": [
+			{
+				"id": "ui-tabs"
+			}
+		],
+		"tns": [
+			{
+				"class": ".sidedrawer-list-item.active",
+				"attr": "color"
+			}
+		]
+	}
 ]

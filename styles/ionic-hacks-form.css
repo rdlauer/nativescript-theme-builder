@@ -1,9 +1,8 @@
 @import url("ionic-hacks-global.css");
-
 .form-input-rounded {
-    border-radius: 30px;
+	border-radius: 30px;
 }
 
 .form-input-disabled {
-    background-color: #f8f8f8;
+	background-color: #f8f8f8;
 }

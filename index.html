@@ -3,8 +3,8 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>NativeScript Theme Builder</title>
-<meta name="description" content="Create and edit CSS themes for building cross-platform native mobile apps with NativeScript, JavaScript, TypeScript, and Angular.">
-<meta name="keywords" content="nativescript, css, style, theme, ui, ux, elements, theme builder, theme editor, widgets, angularjs, angular, mobile app, ios, android">
+<meta name="description" content="Create and edit CSS themes for building cross-platform native mobile apps with NativeScript, JavaScript, TypeScript, Angular, and Vue.js.">
+<meta name="keywords" content="nativescript, css, style, theme, ui, ux, elements, theme builder, theme editor, widgets, angularjs, angular, mobile app, ios, android, vue.js, vue">
 <meta name="viewport" content="width=device-width">
 <meta name="msvalidate.01" content="29F810669842F5240BEEF8B9753C7331" />
 <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -152,19 +152,19 @@
 					<ul id="side-listviews-items" style="display:none">
 						<li>
 							Avatar Border Radius
-							<input id="listitem-avatar-radius-px" type="text" size="4" maxlength="3" value="20" class="enable-txt" />
+							<input id="listitem-avatar-radius-px" type="number" value="20" class="enable-txt" />
 						</li>
 						<li>
 							Item Heading Size
-							<input id="listitem-heading-size-px" type="text" size="4" maxlength="3" value="16" class="enable-txt" />
+							<input id="listitem-heading-size-px" type="number" value="16" class="enable-txt" />
 						</li>
 						<li>
 							Item Sub-Heading Size
-							<input id="listitem-subheading-size-px" type="text" size="4" maxlength="3" value="14" class="enable-txt" />
+							<input id="listitem-subheading-size-px" type="number" value="14" class="enable-txt" />
 						</li>
 						<li>
 							Rounded Thumbnail Border Radius
-							<input id="listitem-thumb-radius-px" type="text" size="4" maxlength="3" value="5" class="enable-txt" />
+							<input id="listitem-thumb-radius-px" type="number" value="5" class="enable-txt" />
 						</li>
 					</ul>
 				</div>
@@ -178,31 +178,31 @@
 					<ul id="side-text-items" style="display:none">
 						<li>
 							Body Text Size
-							<input id="text-size-px" type="text" size="4" maxlength="3" value="14" class="enable-txt" />
+							<input id="text-size-px" type="number" value="14" class="enable-txt" />
 						</li>
 						<li>
 							H1 Size
-							<input id="text-h1-size-px" type="text" size="4" maxlength="3" value="36" class="enable-txt" />
+							<input id="text-h1-size-px" type="number" value="36" class="enable-txt" />
 						</li>
 						<li>
 							H2 Size
-							<input id="text-h2-size-px" type="text" size="4" maxlength="3" value="30" class="enable-txt" />
+							<input id="text-h2-size-px" type="number" value="30" class="enable-txt" />
 						</li>
 						<li>
 							H3 Size
-							<input id="text-h3-size-px" type="text" size="4" maxlength="3" value="24" class="enable-txt" />
+							<input id="text-h3-size-px" type="number" value="24" class="enable-txt" />
 						</li>
 						<li>
 							H4 Size
-							<input id="text-h4-size-px" type="text" size="4" maxlength="3" value="18" class="enable-txt" />
+							<input id="text-h4-size-px" type="number" value="18" class="enable-txt" />
 						</li>
 						<li>
 							H5 Size
-							<input id="text-h5-size-px" type="text" size="4" maxlength="3" value="14" class="enable-txt" />
+							<input id="text-h5-size-px" type="number" value="14" class="enable-txt" />
 						</li>
 						<li>
 							H6 Size
-							<input id="text-h6-size-px" type="text" size="4" maxlength="3" value="12" class="enable-txt" />
+							<input id="text-h6-size-px" type="number" value="12" class="enable-txt" />
 						</li>
 						<li>
 							"Primary" Color
@@ -256,11 +256,11 @@
 						</li>
 						<li>
 							Small Rounded Button Radius
-							<input id="buttons-rounded-sm-px" type="text" size="4" maxlength="3" value="4" class="enable-txt" />
+							<input id="buttons-rounded-sm-px" type="number" value="4" class="enable-txt" />
 						</li>
 						<li>
 							Large Rounded Button Radius
-							<input id="buttons-rounded-lg-px" type="text" size="4" maxlength="3" value="20" class="enable-txt" />
+							<input id="buttons-rounded-lg-px" type="number" value="20" class="enable-txt" />
 						</li>
 					</ul>
 				</div>
@@ -274,15 +274,15 @@
 					<ul id="side-form-elements-items" style="display:none">
 						<li>
 							Label Text Size
-							<input id="form-label-text-px" type="text" size="4" maxlength="3" value="16" class="enable-txt" />
+							<input id="form-label-text-px" type="number" value="16" class="enable-txt" />
 						</li>
 						<li>
 							Placeholder/Input Text Size
-							<input id="form-placeholder-text-px" type="text" size="4" maxlength="3" value="14" class="enable-txt" />
+							<input id="form-placeholder-text-px" type="number" value="14" class="enable-txt" />
 						</li>
 						<li>
 							Rounded Input Radius
-							<input id="form-input-radius-px" type="text" size="4" maxlength="3" value="30" class="enable-txt" />
+							<input id="form-input-radius-px" type="number" value="30" class="enable-txt" />
 						</li>
 					</ul>
 				</div>
@@ -296,7 +296,7 @@
 					<ul id="side-tabs-items" style="display:none">
 						<!--<li>
                         Tab Label Text Size
-                        <input id="tab-label-text-px" type="text" size="4" maxlength="3" value="16" class="enable-txt" />
+                        <input id="tab-label-text-px" type="number" value="16" class="enable-txt" />
                     </li>-->
 						<li>
 							Tab Label Text Color
@@ -361,9 +361,9 @@
 					</a>
 				</li>
 				<li class="tabs-left">
-					<a class="btn-login" href="#loadThemeModal">Load a Color Palette
-						<i class="icon ion-android-arrow-dropdown fa-lg"></i>
-					</a>
+					<i class="icon ion-android-arrow-back fa-lg" id="btn-color-left"></i>
+					<a class="btn-login" href="#loadThemeModal">Color Palettes</a>
+					<i class="icon ion-android-arrow-forward fa-lg" id="btn-color-right"></i>
 				</li>
 			</ul>
 			<div class="main-panel-view">
@@ -371,16 +371,28 @@
 					<div class="row">
 						<div class="col-md-4">
 							<div class="device-bg">
+								<span class="iphonex-time">9:42</span>
+								<i class="iphonex-icons iphonex-bars icon ion-connection-bars"></i>
+								<i class="iphonex-icons iphonex-wifi icon ion-wifi"></i>
+								<i class="iphonex-icons iphonex-battery icon ion-battery-half"></i>
 								<iframe id="ui-widgets" class="device-screen" src="components/preview-widgets.html"></iframe>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="device-bg">
+								<span class="iphonex-time">9:42</span>
+								<i class="iphonex-icons iphonex-bars icon ion-connection-bars"></i>
+								<i class="iphonex-icons iphonex-wifi icon ion-wifi"></i>
+								<i class="iphonex-icons iphonex-battery icon ion-battery-half"></i>
 								<iframe id="ui-listviews" class="device-screen" src="components/preview-list.html"></iframe>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="device-bg">
+								<span class="iphonex-time">9:42</span>
+								<i class="iphonex-icons iphonex-bars icon ion-connection-bars"></i>
+								<i class="iphonex-icons iphonex-wifi icon ion-wifi"></i>
+								<i class="iphonex-icons iphonex-battery icon ion-battery-half"></i>
 								<iframe id="ui-texts" class="device-screen" src="components/preview-text.html"></iframe>
 							</div>
 						</div>
@@ -389,16 +401,28 @@
 					<div class="row">
 						<div class="col-md-4">
 							<div class="device-bg">
+								<span class="iphonex-time">9:42</span>
+								<i class="iphonex-icons iphonex-bars icon ion-connection-bars"></i>
+								<i class="iphonex-icons iphonex-wifi icon ion-wifi"></i>
+								<i class="iphonex-icons iphonex-battery icon ion-battery-half"></i>
 								<iframe id="ui-buttons" class="device-screen" src="components/preview-buttons.html"></iframe>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="device-bg">
+								<span class="iphonex-time">9:42</span>
+								<i class="iphonex-icons iphonex-bars icon ion-connection-bars"></i>
+								<i class="iphonex-icons iphonex-wifi icon ion-wifi"></i>
+								<i class="iphonex-icons iphonex-battery icon ion-battery-half"></i>
 								<iframe id="ui-forms" class="device-screen" src="components/preview-form.html"></iframe>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="device-bg">
+								<span class="iphonex-time">9:42</span>
+								<i class="iphonex-icons iphonex-bars icon ion-connection-bars"></i>
+								<i class="iphonex-icons iphonex-wifi icon ion-wifi"></i>
+								<i class="iphonex-icons iphonex-battery icon ion-battery-half"></i>
 								<iframe id="ui-tabs" class="device-screen" src="components/preview-tabs.html"></iframe>
 							</div>
 						</div>
@@ -684,27 +708,33 @@
 
 			<h3>What is NativeScript?</h3>
 			<p>
-				<a href="https://www.nativescript.org/" target="_blank">NativeScript</a> is an open source framework for building cross-platform native mobile apps with JavaScript, TypeScript,
-				or Angular. One code base, multiple platforms, using the web skills you know and love.</a>
+				<a href="https://www.nativescript.org/" target="_blank">NativeScript</a> is an open source framework for building
+				truly native cross-platform mobile apps with JavaScript, TypeScript, Angular, or Vue.js. One code base, multiple
+				platforms, using the web skills you know and love.</a>
 			</p>
 
 			<h3>How do I get started with NativeScript?</h3>
 			<p>There are getting started tutorials for
-				<a href="https://docs.nativescript.org/angular/tutorial/ng-chapter-0" target="_blank">TypeScript + Angular</a> or
-				<a href="https://docs.nativescript.org/tutorial/chapter-0" target="_blank">vanilla JavaScript</a>.</p>
+				<a href="https://docs.nativescript.org/angular/start/introduction" target="_blank">TypeScript + Angular</a> or
+				<a href="https://docs.nativescript.org/start/introduction" target="_blank">JavaScript</a> or
+				<a href="https://nativescript-vue.org/en/docs/introduction/" target="_blank">NativeScript-Vue</a>.</p>
 
 			<h3>Is there a kitchen sink example (like I see in the simulators here)?</h3>
 			<p>Why yes there is! Feel free to
-				<a href="https://github.com/NativeScript/theme" target="_blank">clone this GitHub repo</a> which contains screens that are similar to those you see displayed in the simulators.</p>
+				<a href="https://github.com/NativeScript/theme" target="_blank">clone this GitHub repo</a> which contains screens
+				that are similar to those you see displayed in the simulators.</p>
 
 			<h3>How do I use CSS with a native mobile app?</h3>
 			<p>NativeScript uses a
-				<a href="https://docs.nativescript.org/ui/styling" target="_blank">subset of CSS</a> for styling apps. The same CSS you use for web development (including id, class, and type selectors).</p>
+				<a href="https://docs.nativescript.org/ui/styling" target="_blank">subset of CSS</a> for styling apps. The same CSS
+				you use for web development (including id, class, and type selectors).</p>
 
 			<h3>The CSS I generate here isn't working with my app!</h3>
-			<p>Be sure to follow the instructions provided when you download your theme. If you're pretty darn sure it's not user error,
+			<p>Be sure to follow the instructions provided when you download your theme. If you're pretty darn sure it's not
+				user error,
 				feel free to
-				<a href="https://github.com/rdlauer/nativescript-theme-builder/issues" target="_blank">submit an issue</a> on Github!</p>
+				<a href="https://github.com/rdlauer/nativescript-theme-builder/issues" target="_blank">submit an issue</a> on
+				Github!</p>
 
 		</div>
 
@@ -724,12 +754,14 @@
 				<a href="https://docs.nativescript.org/ui/theme" target="_blank">Read more about the core themes</a>.</p>
 
 			<p>
-				<b>Step 2)</b> Verify that all native widgets you want to style have the proper CSS classes applied to them. For example,
+				<b>Step 2)</b> Verify that all native widgets you want to style have the proper CSS classes applied to them. For
+				example,
 				a
 				<code>SegmentedBar</code> element should have the
 				<code>segmented-bar</code> class applied, such as:
 				<code>&lt;SegmentedBar class="segmented-bar"&gt;</code>. Discover all the class ids using the
-				<a href="https://github.com/NativeScript/theme/tree/master/app/pages" target="_blank">NativeScript theme kitchen sink repo on GitHub</a>.</p>
+				<a href="https://github.com/NativeScript/theme/tree/master/app/pages" target="_blank">NativeScript theme kitchen
+					sink repo on GitHub</a>.</p>
 
 			<p>
 				<b>Step 3)</b> You will be downloading a CSS file. The contents should be applied to your app
@@ -742,8 +774,8 @@
 				<code>app.css</code> file should import both the core light theme and your downloaded CSS file:</p>
 
 			<pre><code>
-	@import '&lt;your css directory&gt;/core.light.css'; /* nativescript-provided core light theme */
-	@import '&lt;your css directory&gt;/custom.css'; /* this downloaded theme */
+  @import '&lt;css directory&gt;/core.light.css'; /* nativescript-provided core theme */
+  @import '&lt;css directory&gt;/custom.css'; /* your downloaded theme */
 			</code></pre>
 
 			<!--
@@ -770,10 +802,12 @@
 		<div style="text-align:left">
 
 			<h3>Import Custom CSS</h3>
-			<p>If you have previously created a custom theme here and would like to import that generated CSS file, you've come to the
+			<p>If you have previously created a custom theme here and would like to import that generated CSS file, you've come
+				to the
 				right place!</p>
 			<p>
-				<b>Please note:</b> If you have altered the structure of the file significantly, your mileage may vary with the import tool.</p>
+				<b>Please note:</b> If you have altered the structure of the file significantly, your mileage may vary with the
+				import tool.</p>
 
 			<p>
 				<input type="file" id="file" name="file" enctype="multipart/form-data" />
@@ -789,11 +823,12 @@
 	<link rel="stylesheet" type="text/css" href="styles/spectrum.css" />
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
-	<link rel="stylesheet" href="styles/remodal.css">
-	<link rel="stylesheet" href="styles/remodal-default-theme.css">
-	<link rel="stylesheet" href="styles/skins/minimal/grey.css">
+	<link rel="stylesheet" type="text/css" href="styles/remodal.css">
+	<link rel="stylesheet" type="text/css" href="styles/remodal-default-theme.css">
+	<link rel="stylesheet" type="text/css" href="styles/skins/minimal/grey.css">
+	<link rel="stylesheet" type="text/css" href="styles/font-sf.css" />
 
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	 crossorigin="anonymous"></script>
 	<script src="scripts/spectrum.min.js"></script>
 	<script src="scripts/remodal.min.js"></script>

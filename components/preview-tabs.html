@@ -9,6 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="../styles/font-sf.css" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 	<script src="../scripts/ionic.bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 crossorigin="anonymous"></script>
 </head>
 
 <body ng-app="starter">
@@ -20,7 +22,7 @@
 				<ion-header-bar class="bar-positive">
 					<div>
 						<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
-						<h1 class="title">Tabs and Drawer</h1>
+						<h1 class="title remove-left-right-hack">Tabs and Drawer</h1>
 					</div>
 				</ion-header-bar>
 
@@ -33,10 +35,14 @@
 					<ion-tab title="One" icon-on="ion-ios-home" icon-off="ion-ios-home-outline">
 						<ion-content class="tabs-content">
 							<h2>Tab One</h2>
-							<p>Bacon ipsum dolor amet cow porchetta prosciutto short loin, brisket ham hock turducken kielbasa landjaeger. Flank
-								ham hock leberkas, fatback shankle kielbasa alcatra pork belly. Venison alcatra picanha tri-tip brisket, salami landjaeger
-								shoulder hamburger tail. Swine drumstick ball tip tri-tip t-bone bacon strip steak fatback kevin hamburger shoulder
-								picanha. Shank prosciutto frankfurter pork strip steak brisket swine landjaeger kielbasa ball tip beef ribs drumstick
+							<p>Bacon ipsum dolor amet cow porchetta prosciutto short loin, brisket ham hock turducken kielbasa landjaeger.
+								Flank
+								ham hock leberkas, fatback shankle kielbasa alcatra pork belly. Venison alcatra picanha tri-tip brisket, salami
+								landjaeger
+								shoulder hamburger tail. Swine drumstick ball tip tri-tip t-bone bacon strip steak fatback kevin hamburger
+								shoulder
+								picanha. Shank prosciutto frankfurter pork strip steak brisket swine landjaeger kielbasa ball tip beef ribs
+								drumstick
 								shoulder. T-bone jerky pastrami, ball tip turkey swine tongue sirloin.</p>
 						</ion-content>
 					</ion-tab>
@@ -44,19 +50,25 @@
 					<ion-tab title="Two" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline">
 						<ion-content class="tabs-content">
 							<h2>Tab Two</h2>
-							<p>Bacon ipsum dolor amet pork belly salami tri-tip pork chop andouille pastrami. Beef ribs jowl filet mignon bresaola
-								sirloin prosciutto fatback chicken chuck capicola hamburger. Prosciutto spare ribs capicola drumstick, turducken
+							<p>Bacon ipsum dolor amet pork belly salami tri-tip pork chop andouille pastrami. Beef ribs jowl filet mignon
+								bresaola
+								sirloin prosciutto fatback chicken chuck capicola hamburger. Prosciutto spare ribs capicola drumstick,
+								turducken
 								biltong shank pork loin. Fatback landjaeger ribeye flank.</p>
 						</ion-content>
 					</ion-tab>
 
-					<ion-tab title="Three" icon-on="ion-ios-printer" icon-off="ion-ios-printer-outline">
+					<ion-tab title="Three" icon-on="ion-ios-cart" icon-off="ion-ios-cart-outline">
 						<ion-content class="tabs-content">
 							<h2>Tab Three</h2>
-							Bacon ipsum dolor amet fatback strip steak biltong short loin cupim prosciutto bresaola salami ham hock kielbasa ham tri-tip
-							swine. Drumstick biltong sirloin kielbasa ground round pancetta chicken pastrami spare ribs tenderloin pork loin capicola
-							kevin burgdoggen venison. Pancetta prosciutto frankfurter, shankle pastrami porchetta meatloaf doner. Rump pork loin
-							filet mignon salami biltong capicola frankfurter. Shank cow biltong, chuck flank jerky beef jowl filet mignon strip
+							Bacon ipsum dolor amet fatback strip steak biltong short loin cupim prosciutto bresaola salami ham hock kielbasa
+							ham tri-tip
+							swine. Drumstick biltong sirloin kielbasa ground round pancetta chicken pastrami spare ribs tenderloin pork loin
+							capicola
+							kevin burgdoggen venison. Pancetta prosciutto frankfurter, shankle pastrami porchetta meatloaf doner. Rump pork
+							loin
+							filet mignon salami biltong capicola frankfurter. Shank cow biltong, chuck flank jerky beef jowl filet mignon
+							strip
 							steak. Strip steak sirloin salami picanha, tongue capicola hamburger turkey jowl.</p>
 						</ion-content>
 					</ion-tab>
@@ -66,13 +78,13 @@
 			</ion-side-menu-content>
 
 			<ion-side-menu width="200">
-				<ion-header-bar class="bar-positive">
+				<ion-header-bar class="bar-positive side-drawer">
 					<div>
-						<h1 class="title">Items</h1>
+						<h1 class="title no-notch-items">Items</h1>
 					</div>
 				</ion-header-bar>
 				<div class="menu-wrapper">
-					<ul class="list" style="padding-top:44px">
+					<ul class="list" style="padding-top:60px">
 						<li class="item">Item 1</li>
 						<li class="item">Item 2</li>
 						<li class="item">Item 3</li>
@@ -88,6 +100,10 @@
 
 	<script>
 		angular.module('starter', ['ionic']);
+		$(function () {
+			// for some reason, ionic is adding left/right attributes to the title
+			$(".remove-left-right-hack").removeAttr("style");
+		});
 	</script>
 
 </body>

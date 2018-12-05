@@ -1,21 +1,24 @@
 @import url("ionic-hacks-global.css");
-
 .list-tabs-content {
-    padding-top: 44px;
+	padding-top: 44px;
 }
 
 .list-tabs-content-android {
-    padding-top: 88px;
+	padding-top: 88px !important;
 }
 
 .item-thumbnail-left img {
-    border-radius: 5px;
+	border-radius: 5px;
 }
 
 .tab-title {
-    font-size: 14px;
+	font-size: 14px;
 }
 
 .tabs {
-    border-color: #b2b2b2 !important;
+	border-color: #b2b2b2 !important;
+}
+
+.has-tabs.pane {
+	height: fit-content !important;
 }
