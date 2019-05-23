@@ -48,7 +48,7 @@
 		]
 	},
 	{
-		"__comment": "view background color",
+		"__comment": "view background color - 5/23/2019 removed .tab-view from tns section below, seemed to be conflicting with tab-view further down",
 		"id": "global-bg",
 		"iframe": [
 			{
@@ -96,10 +96,6 @@
 			{
 				"class": ".page",
 				"attr": "background-color"
-			},
-			{
-				"class": ".tab-view",
-				"attr": "tab-background-color"
 			},
 			{
 				"class": ".list-group, .list-group-item",

@@ -40,9 +40,7 @@ $(function () {
 		formsLoaded = false,
 		tabsLoaded = false;
 
-	$(
-		'#ui-widgets, #ui-listviews, #ui-texts, #ui-buttons, #ui-forms, #ui-tabs'
-	).on('load', function () {
+	$('#ui-widgets, #ui-listviews, #ui-texts, #ui-buttons, #ui-forms, #ui-tabs').on('load', function () {
 		if (this.id == 'ui-widgets') {
 			widgetsLoaded = true;
 		} else if (this.id == 'ui-listviews') {
