@@ -315,12 +315,12 @@ ul {
 	text-align: center;
 	width: 100%;
 	color: white;
-	height: 50px;
+	height: 75px;
 }
 
 .side-section-footer h4 {
 	font-weight: lighter !important;
-	font-size: 14px;
+	/*font-size: 14px;*/
 	letter-spacing: 1px;
 }
 
